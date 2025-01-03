@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserControllers\RegisterController;
 use App\Http\Controllers\UserControllers\LoginController;
 use App\Http\Controllers\UserControllers\EmailVerificationController;
-
+route::get('/hello',function(){return "hello to api part";});
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
