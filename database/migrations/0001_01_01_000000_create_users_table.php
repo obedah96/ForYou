@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('verification_token', 64)->nullable()->unique();
             $table->string('password');
             $table->rememberToken();
-            $table->string('PhoneNumber');
+            $table->string('phoneNumber');
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();

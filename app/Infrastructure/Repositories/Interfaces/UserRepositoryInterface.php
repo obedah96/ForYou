@@ -14,4 +14,10 @@ interface UserRepositoryInterface
     public function findByVerificationToken(string $token):  ?User;
 
     public function markEmailAsVerified(User $user);
+
+    public function logout(User $user): void;
+
+    public function findById(int $id): ?User;
+
+
 }

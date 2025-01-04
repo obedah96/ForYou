@@ -17,7 +17,7 @@ class LoginUser
     public function execute(array $data): ?EloquentUser
     {
         
-        $user = $this->userRepository->LoginUser($data['email'], $data['password']);
+        $user = $this->userRepository->LoginUser($data['emailOrPhone'], $data['password']);
     
         if (!$user) {
             throw new \Exception('Invalid credentials');

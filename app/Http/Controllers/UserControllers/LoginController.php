@@ -17,20 +17,29 @@ class LoginController extends Controller
     }
 
     public function login(LoginRequest $request)
-    {
-        $validatedData = $request->validated();
+{
+    $validatedData = $request->validated();
 
-        try {
-            $user = $this->loginUser->execute($validatedData);
+    try {
+        // محاولة تسجيل الدخول
+        $user = $this->loginUser->execute($validatedData);
 
-            return response()->json([
-                'message' => 'Login successful',
-                'data' => $user,
-            ], 200);
-        } catch (\Exception $e) {
-            return response()->json([
-                'message' => $e->getMessage(),
-            ], 403);
-        }
+        // إنشاء التوكين
+        $token = $user->createToken('ForYou')->plainTextToken;
+        return response()->json([
+            'message' => 'Login successful',
+            'data' => $user,
+            'token' => $token,
+        ], 200);
+    } catch (\Exception $e) {
+        return response()->json([
+            'message' => $e->getMessage(),
+        ], 403);
     }
+}
+
+    
+
+
+
 }

@@ -20,7 +20,7 @@ class UserRepository implements UserRepositoryInterface
     }
     public function LoginUser($identifier,$password): ?EloquentUser
     {
-        $field = filter_var($identifier, FILTER_VALIDATE_EMAIL) ? 'email' : 'phoneNumber';
+        $field = filter_var($identifier, FILTER_VALIDATE_EMAIL) ? 'email' : 'PhoneNumber';
 
         $user = EloquentUser::where($field, $identifier)->first();
     
@@ -39,5 +39,14 @@ class UserRepository implements UserRepositoryInterface
         $user->email_verified_at = now();
         $user->verification_token = null;
         $user->save();
+    }
+
+    public function logout(EloquentUser $user): void
+    {
+        $user->tokens()->delete();
+    }
+    public function findById(int $id): ?EloquentUser
+    {
+        return EloquentUser::find($id);
     }
 }
