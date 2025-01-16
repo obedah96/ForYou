@@ -16,10 +16,9 @@ class ElectricalApplianceController extends Controller
 
     public function index(Request $request)
     {
-        $page = $request->input('page', 1);
-        $itemsPerPage = ($page == 1) ? 3 : 10; // 3 items for first page, 10 for others
-
-        $products = $this->getPaginatedElectricalAppliances->execute($itemsPerPage);
+        $page=3;
+        
+        $products = $this->getPaginatedElectricalAppliances->execute($page);
 
         return response()->json($products);
     }
