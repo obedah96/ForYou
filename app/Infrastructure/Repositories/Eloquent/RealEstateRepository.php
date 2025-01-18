@@ -8,6 +8,16 @@ class RealEstateRepository implements RealEstateRepositoryInterface
 {
     public function paginateRealEstates(int $perPage): \Illuminate\Contracts\Pagination\Paginator
     {
-        return RealEstate::orderBy('created_at', 'desc')->paginate($perPage);
+        return RealEstate::select(
+            'real_estate.product_name',
+            'real_estate.price',
+            'real_estate.image_path',
+            'real_estate.product_city',
+            'products.product_type' 
+        )
+        ->join('products', 'real_estate.product_id', '=', 'products.id')
+        ->orderBy('real_estate.created_at', 'desc')
+        ->paginate($perPage);
+    
     }
 }

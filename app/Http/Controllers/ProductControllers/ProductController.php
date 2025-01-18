@@ -5,14 +5,21 @@ use App\Http\Controllers\Controller;
 use App\Application\UseCases\Products\AddProduct;
 use App\Http\Requests\ProductFormRequest;
 use Illuminate\Http\JsonResponse;
+use App\Application\UseCases\Products\FindProductUseCase;
+use App\Application\UseCases\Products\GetFilteredProduct;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     protected $addProduct;
+    protected $findProductUseCase;
+    protected $getFilteredProduct;
 
-    public function __construct(AddProduct $addProduct)
+    public function __construct(AddProduct $addProduct,FindProductUseCase $findProductUseCase,GetFilteredProduct $getFilteredProduct)
     {
         $this->addProduct = $addProduct;
+        $this->findProductUseCase = $findProductUseCase;
+        $this->getFilteredProduct=$getFilteredProduct;
     }
 
     public function store(ProductFormRequest $request): JsonResponse
@@ -31,5 +38,30 @@ class ProductController extends Controller
         $product = $this->addProduct->execute($data);
 
         return response()->json(['message' => 'Product created successfully', 'product' => $product], 201);
+    }
+
+    public function findProduct(Request $request)
+    {
+        $id = $request->input('id');
+        $type = $request->input('type');
+        $name = $request->input('name');
+
+        $product = $this->findProductUseCase->execute($id, $type, $name);
+
+        if ($product) {
+            return response()->json($product);
+        }
+
+        return response()->json(['message' => 'Product not found'], 404);
+    }
+    public function getProductsByType($type, Request $request)
+    {
+        $filteredProducts = $this->getFilteredProduct->getProductsByType(
+            $type,
+            $request->get('price_max'),
+            $request->get('city')
+        );
+
+        return response()->json($filteredProducts);
     }
 }

@@ -23,7 +23,11 @@ Route::post('LoginUser',[LoginController::class,'Login']);
 Route::middleware('auth:sanctum')->post('/LogoutUser',[LogoutController::class,'logout']);
 Route::middleware('auth:sanctum')->get('Personal_Information', [PersonalInformationController::class, 'show']);
 Route::middleware('auth:sanctum')->post('/products', [ProductController::class, 'store']);
+
 Route::middleware('auth:sanctum')->get('/cars', [CarController::class, 'index']);
 Route::middleware('auth:sanctum')->get('/electrical-appliances', [ElectricalApplianceController::class, 'index']);
 Route::middleware('auth:sanctum')->get('/home-appliances', [HomeApplianceController::class, 'index']);
 Route::middleware('auth:sanctum')->get('/real-estates', [RealEstateController::class, 'index']);
+
+
+Route::middleware('auth:sanctum')->get('/products/{type}', [ProductController::class, 'getProductsByType']);

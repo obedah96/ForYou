@@ -17,8 +17,8 @@ class RealEstateController extends Controller
 
     public function index(Request $request)
     {
-        // احصل على عدد المنتجات لكل صفحة
-        $perPage = $request->get('per_page', 3); // افتراضياً 3 للصفحة الأولى
+        
+        $perPage = $request->get('per_page', 3);
         $realEstates = $this->getRealEstatesUseCase->execute($perPage);
 
         return response()->json($realEstates);

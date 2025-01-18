@@ -46,4 +46,51 @@ class ProductRepository implements ProductRepositoryInterface
                 throw new \Exception("Invalid product type");
         }
     }
+
+    public function findProductByIdTypeAndName($id, $type, $name)
+    {
+        return Product::where('id', $id)
+                      ->where('product_type', $type)
+                      ->where('owner_name', 'like', '%' . $name . '%')
+                      ->with([
+                          'cars', 
+                          'electricalAppliances', 
+                          'homeAppliances', 
+                          'realEstate'
+                      ])
+                      ->first();
+    }
+
+    public function getFilteredProducts($type, $priceMax, $city)
+    {
+        switch ($type) {
+            case 'cars':
+                $model = Car::query();
+                break;
+            case 'electricalAppliances':
+                $model = ElectricalAppliance::query();
+                break;
+            case 'homeAppliances':
+                $model = HomeAppliance::query();
+                break;
+            case 'realEstate':
+                $model = RealEstate::query();
+                break;
+            default:
+                return [];
+        }
+
+       
+        if ($priceMax) {
+            $model->where('price', '<=', $priceMax);
+        }
+
+        if ($city) {
+            $model->where('product_city', 'like', '%' . $city . '%');
+        }
+
+        return $model->select('product_name', 'price', 'image_path', 'product_city')
+                     ->orderBy('created_at', 'desc')
+                     ->get();
+    }
 }

@@ -9,6 +9,11 @@ class CarRepository implements CarRepositoryInterface
 {
     public function getLatestCars(int $perPage)
     {
-        return Car::orderBy('created_at', 'desc')->paginate($perPage);
+        return Car::select('cars.product_id', 'cars.product_name', 'cars.price', 'cars.image_path', 'cars.product_city', 'products.product_type')
+        ->join('products', 'cars.product_id', '=', 'products.id') 
+        ->orderBy('cars.created_at', 'desc')
+        ->paginate($perPage);
+
+
     }
 }
