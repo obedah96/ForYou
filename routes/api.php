@@ -29,5 +29,5 @@ Route::middleware('auth:sanctum')->get('/electrical-appliances', [ElectricalAppl
 Route::middleware('auth:sanctum')->get('/home-appliances', [HomeApplianceController::class, 'index']);
 Route::middleware('auth:sanctum')->get('/real-estates', [RealEstateController::class, 'index']);
 
-
+Route::middleware('auth:sanctum')->post('/product_details',[ProductController::class,'findProduct']);
 Route::middleware('auth:sanctum')->get('/products/{type}', [ProductController::class, 'getProductsByType']);
