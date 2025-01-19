@@ -31,7 +31,6 @@ class CreateUser
             'city' => $data['city'],
             'region' => $data['region'],
             'gender' => $data['gender'],
-            'age' => $data['age'],
             'verification_token' => Str::random(64) 
         ]);
 
