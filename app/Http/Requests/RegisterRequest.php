@@ -30,7 +30,6 @@ class RegisterRequest extends FormRequest
             'city' => 'required|string|max:100',
             'region' => 'required|string|max:100',
             'gender' => 'required|in:male,female',
-            'age' => 'required|integer',
         ];
     }
 
@@ -48,9 +47,6 @@ class RegisterRequest extends FormRequest
             'city.required' => 'The city is required.',
             'region.required' => 'The region is required.',
             'gender.in' => 'The gender must be male, female, or other.',
-            'age.integer' => 'The age must be a valid number.',
-            'age.min' => 'The age must be at least 0.',
-            'age.max' => 'The age must not exceed 120.',
         ];
     }
 }

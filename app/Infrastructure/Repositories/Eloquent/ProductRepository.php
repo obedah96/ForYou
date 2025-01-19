@@ -48,50 +48,48 @@ class ProductRepository implements ProductRepositoryInterface
     }
 
     public function findProductByIdTypeAndName($id, $type, $name)
-{
-    // أولاً: البحث عن المنتج في جدول 'products' باستخدام 'id' و 'product_type'
-    $product = Product::where('id', $id)
-                      ->where('product_type', $type)
-                      ->with([
-                          'cars', 
-                          'electricalAppliances', 
-                          'homeAppliances', 
-                          'realEstate'
-                      ])
-                      ->first();
+    {
+        $product = Product::where('id', $id)
+                        ->where('product_type', $type)
+                        ->with([
+                            'cars', 
+                            'electricalAppliances', 
+                            'homeAppliances', 
+                            'realEstate'
+                        ])
+                        ->first();
 
-    if (!$product) {
-        return null; // إذا لم يتم العثور على المنتج، أرجع null
+        if (!$product) {
+            return null; 
+        }
+
+        
+        $relatedModel = null;
+        switch ($type) {
+            case 'cars':
+                $relatedModel = Car::class;
+                break;
+            case 'electricalAppliances':
+                $relatedModel = ElectricalAppliance::class;
+                break;
+            case 'homeAppliances':
+                $relatedModel = HomeAppliance::class;
+                break;
+            case 'realEstate':
+                $relatedModel = RealEstate::class;
+                break;
+        }
+
+        if (!$relatedModel) {
+            return null; 
+        }
+
+        $relatedProduct = $relatedModel::where('product_id', $product->id)
+                                    ->where('product_name', $name)
+                                    ->first();
+
+        return $relatedProduct; 
     }
-
-    // ثانيًا: تحديد الجدول المناسب بناءً على 'product_type'
-    $relatedModel = null;
-    switch ($type) {
-        case 'cars':
-            $relatedModel = Car::class;
-            break;
-        case 'electricalAppliances':
-            $relatedModel = ElectricalAppliance::class;
-            break;
-        case 'homeAppliances':
-            $relatedModel = HomeAppliance::class;
-            break;
-        case 'realEstate':
-            $relatedModel = RealEstate::class;
-            break;
-    }
-
-    if (!$relatedModel) {
-        return null; 
-    }
-
-    // ثالثًا: البحث في الجدول المرتبط باستخدام 'product_name'
-    $relatedProduct = $relatedModel::where('product_id', $product->id)
-                                   ->where('product_name', $name)
-                                   ->first();
-
-    return $relatedProduct; // إرجاع المنتج المرتبط إذا تم العثور عليه
-}
 
 
     public function getFilteredProducts($type, $priceMax, $city)

@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('city');
             $table->string('region');
             $table->string('gender');
-            $table->integer('age');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('verification_token', 64)->nullable()->unique();
