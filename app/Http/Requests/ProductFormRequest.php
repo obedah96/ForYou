@@ -19,6 +19,7 @@ class ProductFormRequest extends FormRequest
             'product_count' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required|numeric',
+            'contact_info' => 'required|string|max:255',
             'delivery' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];

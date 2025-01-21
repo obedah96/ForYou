@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('contact_info');
             $table->string('owner_name'); 
             $table->enum('product_type', ['cars', 'electricalAppliances', 'homeAppliances', 'realEstate']);
             $table->timestamps();
