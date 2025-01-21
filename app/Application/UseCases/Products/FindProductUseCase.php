@@ -13,8 +13,8 @@ class FindProductUseCase
         $this->productRepository = $productRepository;
     }
 
-    public function execute($id, $type, $name)
+    public function execute($id)
     {
-        return $this->productRepository->findProductByIdTypeAndName($id, $type, $name);
+        return $this->productRepository->findProductByIdTypeAndName($id);
     }
 }

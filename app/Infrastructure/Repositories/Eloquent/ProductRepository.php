@@ -23,7 +23,6 @@ class ProductRepository implements ProductRepositoryInterface
 
         $subProduct = $this->createSubProduct($product, $data);
 
-        // دمج بيانات المنتج الفرعي مع المنتج الرئيسي
         $product->subProduct = $subProduct;
 
         return $product;
@@ -47,49 +46,43 @@ class ProductRepository implements ProductRepositoryInterface
         }
     }
 
-    public function findProductByIdTypeAndName($id, $type, $name)
+        public function findProductByIdTypeAndName($id)
     {
-        $product = Product::where('id', $id)
-                        ->where('product_type', $type)
-                        ->with([
-                            'cars', 
-                            'electricalAppliances', 
-                            'homeAppliances', 
-                            'realEstate'
-                        ])
-                        ->first();
+        
+        $product = Product::where('id', $id)->first();
 
         if (!$product) {
-            return null; 
+            return null;
         }
 
         
-        $relatedModel = null;
-        switch ($type) {
-            case 'cars':
-                $relatedModel = Car::class;
-                break;
-            case 'electricalAppliances':
-                $relatedModel = ElectricalAppliance::class;
-                break;
-            case 'homeAppliances':
-                $relatedModel = HomeAppliance::class;
-                break;
-            case 'realEstate':
-                $relatedModel = RealEstate::class;
-                break;
-        }
+        $type = $product->product_type;
+
+        $relatedModel = match($type) {
+            'cars' => Car::class,
+            'electricalAppliances' => ElectricalAppliance::class,
+            'homeAppliances' => HomeAppliance::class,
+            'realEstate' => RealEstate::class,
+            default => null,
+        };
 
         if (!$relatedModel) {
-            return null; 
+            return null;
         }
 
-        $relatedProduct = $relatedModel::where('product_id', $product->id)
-                                    ->where('product_name', $name)
-                                    ->first();
+        
+        $relatedProduct = $relatedModel::where('product_id', $product->id)->first();
 
-        return $relatedProduct; 
+        if (!$relatedProduct) {
+            return null;
+        }
+
+        return [
+            'product' => $product,
+            'details' => $relatedProduct
+        ];
     }
+
 
 
     public function getFilteredProducts($type, $priceMax, $city)

@@ -43,10 +43,8 @@ class ProductController extends Controller
     public function findProduct(Request $request)
     {
         $id = $request->input('id');
-        $type = $request->input('type');
-        $name = $request->input('name');
 
-        $product = $this->findProductUseCase->execute($id, $type, $name);
+        $product = $this->findProductUseCase->execute($id);
 
         if ($product) {
             return response()->json($product);
