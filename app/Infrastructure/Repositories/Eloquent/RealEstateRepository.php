@@ -9,6 +9,7 @@ class RealEstateRepository implements RealEstateRepositoryInterface
     public function paginateRealEstates(int $perPage): \Illuminate\Contracts\Pagination\Paginator
     {
         return RealEstate::select(
+            'real_estate.product_id',
             'real_estate.product_name',
             'real_estate.price',
             'real_estate.image_path',
