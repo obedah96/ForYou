@@ -13,8 +13,8 @@ class GetHomeAppliancesUseCase
         $this->repository = $repository;
     }
 
-    public function execute(int $limit, int $page)
+    public function execute( int $page)
     {
-        return $this->repository->paginate($limit, $page);
+        return $this->repository->paginate( $page);
     }
 }

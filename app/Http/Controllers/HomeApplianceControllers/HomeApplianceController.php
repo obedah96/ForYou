@@ -16,10 +16,10 @@ class HomeApplianceController extends Controller
 
     public function index(Request $request)
     {
-        $limit = 10; 
+       
         $page = $request->query('page', 1);
 
-        $homeAppliances = $this->useCase->execute($limit, $page);
+        $homeAppliances = $this->useCase->execute( $page);
 
         return response()->json($homeAppliances);
     }

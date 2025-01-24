@@ -13,8 +13,8 @@ class GetPaginatedElectricalAppliances
         $this->repository = $repository;
     }
 
-    public function execute(int $itemsPerPage)
+    public function execute(int $PerPage)
     {
-        return $this->repository->paginateElectricalAppliances($itemsPerPage);
+        return $this->repository->paginateElectricalAppliances($PerPage);
     }
 }

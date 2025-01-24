@@ -4,5 +4,5 @@ namespace App\Infrastructure\Repositories\Interfaces;
 
 interface ElectricalApplianceRepositoryInterface
 {
-    public function paginateElectricalAppliances(int $itemsPerPage);
+    public function paginateElectricalAppliances(int $PerPage);
 }

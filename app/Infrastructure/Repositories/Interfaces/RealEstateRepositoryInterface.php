@@ -4,5 +4,5 @@ namespace App\Infrastructure\Repositories\Interfaces;
 
 interface RealEstateRepositoryInterface
 {
-    public function paginateRealEstates(int $perPage): \Illuminate\Contracts\Pagination\Paginator;
+    public function paginateRealEstates(int $perPage);
 }

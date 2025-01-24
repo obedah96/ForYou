@@ -4,5 +4,5 @@ namespace App\Infrastructure\Repositories\Interfaces;
 
 interface HomeApplianceRepositoryInterface
 {
-    public function paginate(int $limit, int $page);
+    public function paginate( int $page);
 }
