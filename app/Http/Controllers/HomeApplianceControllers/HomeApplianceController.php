@@ -1,9 +1,9 @@
 <?php
-//App\Http\Controllers\HomeApplianceControllers\HomeApplianceController.php
+
 namespace App\Http\Controllers\HomeApplianceControllers;
+
 use App\Http\Controllers\Controller;
 use App\Application\UseCases\HomeAppliances\GetHomeAppliancesUseCase;
-use Illuminate\Http\Request;
 
 class HomeApplianceController extends Controller
 {
@@ -14,13 +14,16 @@ class HomeApplianceController extends Controller
         $this->useCase = $useCase;
     }
 
-    public function index(Request $request)
+    
+    public function getLatestThree()
     {
-       
-        $page = $request->query('page', 1);
+        $homeAppliances = $this->useCase->getLatestThree();
+        return response()->json($homeAppliances);
+    }
 
-        $homeAppliances = $this->useCase->execute( $page);
-
+       public function getAll()
+    {
+        $homeAppliances = $this->useCase->getAll();
         return response()->json($homeAppliances);
     }
 }

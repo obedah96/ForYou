@@ -13,8 +13,12 @@ class GetLatestCarsUseCase
         $this->carRepository = $carRepository;
     }
 
-    public function execute(int $perPage)
+    public function execute()
     {
-        return $this->carRepository->getLatestCars($perPage);
+        return $this->carRepository->getLatestThreeCars();
+    }
+    public function execute1()
+    {
+        return $this->carRepository->getAllCars();
     }
 }

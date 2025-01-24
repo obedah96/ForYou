@@ -1,8 +1,9 @@
 <?php
-//App\Infrastructure\Repositories\Interfaces\RealEstateRepositoryInterface.php
+// App\Infrastructure\Repositories\Interfaces\RealEstateRepositoryInterface.php
 namespace App\Infrastructure\Repositories\Interfaces;
 
 interface RealEstateRepositoryInterface
 {
-    public function paginateRealEstates(int $perPage);
+    public function getLatestRealEstates();
+    public function getAllRealEstates();
 }

@@ -1,8 +1,10 @@
 <?php
-//App\Infrastructure\Repositories\Interfaces\HomeApplianceRepositoryInterface.php
+
 namespace App\Infrastructure\Repositories\Interfaces;
 
 interface HomeApplianceRepositoryInterface
 {
-    public function paginate( int $page);
+    public function getLatestThree(): \Illuminate\Support\Collection;
+
+    public function getAll(): \Illuminate\Support\Collection;
 }

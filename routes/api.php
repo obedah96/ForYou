@@ -24,10 +24,17 @@ Route::middleware('auth:sanctum')->post('/LogoutUser',[LogoutController::class,'
 Route::middleware('auth:sanctum')->get('Personal_Information', [PersonalInformationController::class, 'show']);
 Route::middleware('auth:sanctum')->post('/products', [ProductController::class, 'store']);
 
-Route::middleware('auth:sanctum')->get('/cars', [CarController::class, 'index']);
-Route::middleware('auth:sanctum')->get('/electrical-appliances', [ElectricalApplianceController::class, 'index']);
-Route::middleware('auth:sanctum')->get('/home-appliances', [HomeApplianceController::class, 'index']);
-Route::middleware('auth:sanctum')->get('/real-estates', [RealEstateController::class, 'index']);
+Route::middleware('auth:sanctum')->get('/Cars/all', [CarController::class, 'getLatestThreeCars']);
+Route::middleware('auth:sanctum')->get('/cars/latest', [CarController::class, 'getAllCars']);
+
+Route::middleware('auth:sanctum')->get('/ElectricalAppliances/all', [ElectricalApplianceController::class, 'getAllAppliances']);
+Route::middleware('auth:sanctum')->get('/ElectricalAppliances/latest', [ElectricalApplianceController::class, 'getLatestThree']);
+
+Route::middleware('auth:sanctum')->get('/home-appliances/all', [HomeApplianceController::class, 'getAll']);
+Route::middleware('auth:sanctum')->get('/home-appliances/latest', [HomeApplianceController::class, 'getLatestThree']);
+
+Route::middleware('auth:sanctum')->get('/real-estates/all', [RealEstateController::class, 'getAll']);
+Route::middleware('auth:sanctum')->get('/real-estates/latest', [RealEstateController::class, 'getLatest']);
 
 Route::middleware('auth:sanctum')->post('/product_details',[ProductController::class,'findProduct']);
 Route::middleware('auth:sanctum')->get('/products/{type}', [ProductController::class, 'getProductsByType']);

@@ -1,6 +1,7 @@
 <?php
 // App\Http\Controllers\ElectricalApplianceControllers\ElectricalApplianceController.php
 namespace App\Http\Controllers\ElectricalApplianceControllers;
+
 use App\Http\Controllers\Controller;
 use App\Application\UseCases\ElectricalAppliances\GetPaginatedElectricalAppliances;
 use Illuminate\Http\Request;
@@ -14,12 +15,17 @@ class ElectricalApplianceController extends Controller
         $this->getPaginatedElectricalAppliances = $getPaginatedElectricalAppliances;
     }
 
-    public function index(Request $request)
+    
+    public function getLatestThree()
     {
-        $page=3;
-        
-        $products = $this->getPaginatedElectricalAppliances->execute($page);
+        $latestThree = $this->getPaginatedElectricalAppliances->getLatestThree();
+        return response()->json($latestThree);
+    }
 
-        return response()->json($products);
+    
+    public function getAllAppliances()
+    {
+        $allProducts = $this->getPaginatedElectricalAppliances->getAll();
+        return response()->json($allProducts);
     }
 }

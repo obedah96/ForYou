@@ -1,5 +1,5 @@
 <?php
-//  App\Application\UseCases\RealEstates\GetRealEstatesUseCase.php
+// App\Application\UseCases\RealEstates\GetRealEstatesUseCase.php
 namespace App\Application\UseCases\RealEstates;
 
 use App\Infrastructure\Repositories\Interfaces\RealEstateRepositoryInterface;
@@ -13,8 +13,15 @@ class GetRealEstatesUseCase
         $this->realEstateRepository = $realEstateRepository;
     }
 
-    public function execute(int $perPage)
+    
+    public function getLatest()
     {
-        return $this->realEstateRepository->paginateRealEstates($perPage);
+        return $this->realEstateRepository->getLatestRealEstates();
+    }
+
+    
+    public function getAll()
+    {
+        return $this->realEstateRepository->getAllRealEstates();
     }
 }

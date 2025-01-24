@@ -1,8 +1,8 @@
 <?php
 // App\Application\UseCases\ElectricalAppliances\GetPaginatedElectricalAppliances.php
 namespace App\Application\UseCases\ElectricalAppliances;
-use App\Infrastructure\Repositories\Interfaces\ElectricalApplianceRepositoryInterface;
 
+use App\Infrastructure\Repositories\Interfaces\ElectricalApplianceRepositoryInterface;
 
 class GetPaginatedElectricalAppliances
 {
@@ -13,8 +13,15 @@ class GetPaginatedElectricalAppliances
         $this->repository = $repository;
     }
 
-    public function execute(int $PerPage)
+    
+    public function getLatestThree()
     {
-        return $this->repository->paginateElectricalAppliances($PerPage);
+        return $this->repository->getLatestThreeAppliances();
+    }
+
+    
+    public function getAll()
+    {
+        return $this->repository->getAllAppliances();
     }
 }

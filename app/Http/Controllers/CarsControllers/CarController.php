@@ -15,10 +15,15 @@ class CarController extends Controller
         $this->getLatestCarsUseCase = $getLatestCarsUseCase;
     }
 
-    public function index(Request $request)
+    public function getLatestThreeCars(Request $request)
     {
-        $perPage = 3; 
-        $cars = $this->getLatestCarsUseCase->execute($perPage);
+        $cars = $this->getLatestCarsUseCase->execute();
+        
+        return response()->json($cars);
+    }
+    public function getAllCars(Request $request)
+    {
+        $cars = $this->getLatestCarsUseCase->execute1();
         
         return response()->json($cars);
     }

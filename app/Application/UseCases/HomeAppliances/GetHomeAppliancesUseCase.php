@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Application\UseCases\HomeAppliances;
-//App\Application\UseCases\HomeAppliances\GetHomeAppliancesUseCase.php
+
 use App\Infrastructure\Repositories\Interfaces\HomeApplianceRepositoryInterface;
 
 class GetHomeAppliancesUseCase
@@ -13,8 +13,15 @@ class GetHomeAppliancesUseCase
         $this->repository = $repository;
     }
 
-    public function execute( int $page)
+    
+    public function getLatestThree()
     {
-        return $this->repository->paginate( $page);
+        return $this->repository->getLatestThree();
+    }
+
+    
+    public function getAll()
+    {
+        return $this->repository->getAll();
     }
 }

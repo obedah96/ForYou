@@ -1,8 +1,8 @@
 <?php
-//App\Http\Controllers\RealEstateControllers\RealEstateController.php
+// App\Http\Controllers\RealEstateControllers\RealEstateController.php
 namespace App\Http\Controllers\RealEstateControllers;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
 use App\Application\UseCases\RealEstates\GetRealEstatesUseCase;
 use Illuminate\Http\Request;
 
@@ -15,12 +15,17 @@ class RealEstateController extends Controller
         $this->getRealEstatesUseCase = $getRealEstatesUseCase;
     }
 
-    public function index(Request $request)
+    
+    public function getLatest()
     {
-        
-        $perPage = $request->get('per_page', 3);
-        $realEstates = $this->getRealEstatesUseCase->execute($perPage);
+        $realEstates = $this->getRealEstatesUseCase->getLatest();
+        return response()->json($realEstates);
+    }
 
+    
+    public function getAll()
+    {
+        $realEstates = $this->getRealEstatesUseCase->getAll();
         return response()->json($realEstates);
     }
 }

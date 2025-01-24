@@ -4,5 +4,6 @@ namespace App\Infrastructure\Repositories\Interfaces;
 
 interface CarRepositoryInterface
 {
-    public function getLatestCars(int $perPage);
+    public function getLatestThreeCars();
+    public function getAllCars();
 }
