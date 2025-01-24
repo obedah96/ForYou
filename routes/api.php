@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->post('/LogoutUser',[LogoutController::class,'
 Route::middleware('auth:sanctum')->get('Personal_Information', [PersonalInformationController::class, 'show']);
 Route::middleware('auth:sanctum')->post('/products', [ProductController::class, 'store']);
 
-Route::middleware('auth:sanctum')->get('/Cars/all', [CarController::class, 'getAllCars']);
+Route::middleware('auth:sanctum')->get('/cars/all', [CarController::class, 'getAllCars']);
 Route::middleware('auth:sanctum')->get('/cars/latest', [CarController::class, 'getLatestThreeCars']);
 
 Route::middleware('auth:sanctum')->get('/ElectricalAppliances/all', [ElectricalApplianceController::class, 'getAllAppliances']);
