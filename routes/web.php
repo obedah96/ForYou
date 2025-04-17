@@ -22,3 +22,7 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::get('dashboard',function(){
+    return view('admin.dashboard'); 
+})->name('admin.dashboard');
