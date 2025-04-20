@@ -1,0 +1,62 @@
+body {
+    background-color: #000;
+}
+
+
+.gradient-form {
+    background: linear-gradient(to bottom, #FFFF99 0%, #FFD700 100%);
+}
+
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.gradient-form {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 24rem;
+}
+
+.gradient-form h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.gradient-form label {
+    color: #000;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.gradient-form input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+}
+
+.gradient-form button {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.gradient-form button:hover {
+    opacity: 0.9;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="{{ asset('resources/css/admin.css') }}">
 </head>
 <body class="bg-black">
     <div class="flex items-center justify-center min-h-screen">
