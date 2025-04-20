@@ -14,7 +14,6 @@
       <div class="nav-links">
         <a href="#about">عن التطبيق</a>
         <a href="#features">الخدمات</a>
-        <a href="#download">التسجيل دخول</a>
       </div>
       <h1 class="logo">FORYOU</h1>
     </div>
