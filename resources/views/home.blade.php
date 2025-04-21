@@ -57,11 +57,6 @@
   <div class="overlay-shape"></div>
 
   <div class="container">
-    <!-- الصور (على اليسار) -->
-    <div class="phones">
-      <img src="{{ asset('images/phones.jpeg') }}" alt="For You App Phones" class="phones-image">
-    </div>
-
     <!-- النصوص (على اليمين) -->
     <div class="content">
       <h2>تجربة تسوق سلسة</h2>
@@ -77,6 +72,11 @@
         <li>يمكنك الوصول بسرعة إلى معلومات مفصّلة لكل منتج، مما يتيح لك اتخاذ قرارات مستنيرة وتوفير الوقت الثمين.</li>
         <li>اكتشف السوق في غضون دقائق واستمتع بتجربة سلسة وسهلة الاستخدام تعزّز رحلة التسوّق الخاصة بك.</li>
       </ul>
+    </div>
+
+    <!-- الصور (على اليسار) -->
+    <div class="phones">
+        <img src="{{ asset('images/phones.jpeg') }}" alt="For You App Phones" class="phones-image">
     </div>
   </div>
 </section>
