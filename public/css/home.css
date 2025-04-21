@@ -199,15 +199,16 @@
   padding-left: 20px;       
   margin-bottom: 16px;
   line-height: 1.5;
+  padding-right: 20px;
 }
 .features-list li::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: #f59e0b;      
   border-radius: 50%;
-  left: 0;
+  right: 0;
   top: 6px;          
 }
 
