@@ -119,6 +119,113 @@
     font-size: .95rem;
     color: #555555;
   }
+
+  /* ——— Section & Background ——— */
+.shopping-experience {
+  position: relative;
+  background: #111;         /* خلفية داكنة */
+  padding: 80px 0;
+  overflow: hidden;
+  direction: rtl;
+  color: #fff;
+}
+.shopping-experience .overlay-shape {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: #222;         /* لون دائري غامق */
+  border-radius: 50%;
+  top: 50%;
+  left: -400px;             /* تحريك نصف الشكل للخارج */
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* ——— Container Grid ——— */
+.shopping-experience .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+/* ——— Left: Single Phone Image ——— */
+.phones {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phones .phones-image {
+  max-width: 100%;
+  width: 320px;             
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  object-fit: cover;
+}
+
+/* ——— Right: Content ——— */
+.content {
+  flex: 1;
+  padding-left: 60px;
+}
+.content h2 {
+  display: inline-block;
+  background: #f59e0b;     
+  padding: 12px 24px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+.content .lead {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* ——— Features List ——— */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.features-list li {
+  position: relative;
+  padding-left: 20px;       
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+.features-list li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f59e0b;      
+  border-radius: 50%;
+  left: 0;
+  top: 6px;          
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 992px) {
+  .shopping-experience .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .content {
+    padding-left: 0;
+    margin-bottom: 40px;
+  }
+  .phones {
+    margin-bottom: 20px;
+  }
+}
+
   
   /* — Contact Form — */
   #contact-form {

@@ -19,14 +19,7 @@
     </div>
   </nav>
 
-  {{-- ——— Hero / Download Links ——— --}}
-  <section id="download">
-    <h2>روابط التنزيل:</h2>
-    <div class="store-links">
-      <a href="#"><img src="{{ asset('images/appstore.png') }}" alt="App Store"></a>
-      <a href="#"><img src="{{ asset('images/googleplay.png') }}" alt="Google Play"></a>
-    </div>
-  </section>
+  
 
   {{-- ——— Contact Info & Social ——— --}}
   <section id="contact-info">
@@ -57,12 +50,37 @@
         <h3>أمان قوي</h3>
         <p>نعطي الأولوية لحماية البيانات من خلال تدابير أمنية قوية وتحديثات منتظمة لضمان سلامة المستخدم.</p>
       </div>
-      <div class="feature-item">
-        <h3>تجربة تسوق سلسة</h3>
-        <p>تم تصميم هذا التطبيق من قبل مطورينا المهرة لتقديم أفضل تجربة للمستخدم وتوفير الوقت لك بفضل ميزاته المدروسة.</p>
-      </div>
     </div>
   </section>
+
+  <section class="shopping-experience">
+  <div class="overlay-shape"></div>
+
+  <div class="container">
+    <!-- الصور (على اليسار) -->
+    <div class="phones">
+      <img src="{{ asset('images/phones.jpeg') }}" alt="For You App Phones" class="phones-image">
+    </div>
+
+    <!-- النصوص (على اليمين) -->
+    <div class="content">
+      <h2>تجربة تسوق سلسة</h2>
+      <p class="lead">
+        تم تصميم هذا التطبيق من قبل مطورينا المهرة لتقديم أفضل تجربة للمستخدم وتوفير الوقت لك 
+        بفضل ميزاته المدروسة.
+      </p>
+
+      <ul class="features-list">
+        <li>استمتع باستخدام التطبيق دون أي تكاليف، حيث إنه مجاني للاستخدام دون أي رسوم.</li>
+        <li>أضف عناصر بسهولة إلى المنصة واعرضها للبيع، لتصل إلى جمهور أوسع.</li>
+        <li>قم بتصفية المنتجات بسهولة للعثور على أفضل النتائج المخصّصة لاحتياجاتك.</li>
+        <li>يمكنك الوصول بسرعة إلى معلومات مفصّلة لكل منتج، مما يتيح لك اتخاذ قرارات مستنيرة وتوفير الوقت الثمين.</li>
+        <li>اكتشف السوق في غضون دقائق واستمتع بتجربة سلسة وسهلة الاستخدام تعزّز رحلة التسوّق الخاصة بك.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 
   {{-- ——— Call to Action: Download Now ——— --}}
   <section id="cta-download">
@@ -117,6 +135,15 @@
         <h3>الأدوات المنزلية</h3>
         <p>قم بشراء وبيع الأدوات المنزلية بسرعة مثل الأسرة والأرائك وأدوات المطبخ.</p>
       </div>
+    </div>
+  </section>
+
+  {{-- ——— Hero / Download Links ——— --}}
+  <section id="download">
+    <h2>روابط التنزيل:</h2>
+    <div class="store-links">
+      <a href="#"><img src="{{ asset('images/appstore.png') }}" alt="App Store"></a>
+      <a href="#"><img src="{{ asset('images/googleplay.png') }}" alt="Google Play"></a>
     </div>
   </section>
 
