@@ -19,6 +19,37 @@
     </div>
   </nav>
 
+  <d class="contact-hero">
+    <div class="bg-overlay"></div>
+
+    <div class="contact-container">
+        <div class="phones">
+            <img src="{{ asset('images/phoneback.jpeg') }}"
+            alt="Phone Back"
+            class="phone-back">
+
+            <img src="{{ asset('images/phonefront.jpeg') }}" 
+            alt="Phone Front"
+            class="phone-front">
+        </div>
+        <div class="contact-content">
+            <h2>افضل طريقة للتواصل مع العملاء</h2>
+            <p>
+                اكتشف التطبيق الرائد في سوريا الذي يسمح لك بالتسوق لجميع المنتجات التي تريدها
+                  وبيع منتجاتك الخاصة بكل سهولة
+            </p>
+            <div class="download-buttons">
+                <a href="#" class="btn appstore">
+                    <i class="fab fa-apple">App Store</i>
+                </a>
+                <a href="#" class="btn googleplay">
+                    <i class="fab fa-google-play">Google Play</i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+  </section>
   
 
   {{-- ——— Contact Info & Social ——— --}}
