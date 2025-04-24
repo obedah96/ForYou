@@ -21,28 +21,36 @@
     </div>
   </nav>
 
-  {{-- ——— Contact Hero ——— --}}
-  <section class="contact-hero">
-    <div class="bg-overlay"></div>
-    <div class="container hero-container">
-      <div class="phones">
-        <img src="{{ asset('images/phoneback.jpeg') }}"  alt="Phone Back"  class="phone-back">
-        <img src="{{ asset('images/phonefront.jpeg') }}" alt="Phone Front" class="phone-front">
-      </div>
-      <div class="hero-content">
-        <h2>أفضل طريقة للتواصل مع العملاء</h2>
-        <p>اكتشف التطبيق الرائد في سوريا الذي يسمح لك بالتسوّق لجميع المنتجات التي تريدها وبيع منتجاتك الخاصة بكل سهولة.</p>
-        <div class="download-buttons">
-          <a href="#" class="btn appstore">
-            <i class="fab fa-apple"></i> App Store
-          </a>
-          <a href="#" class="btn googleplay">
-            <i class="fab fa-google-play"></i> Google Play
-          </a>
-        </div>
+{{-- ——— Contact Hero ——— --}}
+<section class="contact-hero">
+  {{-- لا تحتاج إلى عنصر <img> للخلفية بعد الآن --}}
+  <div class="container hero-container">
+    {{-- ——— Left: one phone image ——— --}}
+    <div class="phones">
+      <img src="{{ asset('images/phone-side.jpeg') }}"
+           alt="For You App Phone"
+           class="phone-side">
+    </div>
+
+    {{-- ——— Right: content ——— --}}
+    <div class="hero-content">
+      <h2>أفضل طريقة للتواصل مع العملاء</h2>
+      <p>
+        اكتشف التطبيق الرائد في سوريا الذي يسمح لك بالتسوّق لجميع المنتجات التي تريدها
+        وبيع منتجاتك الخاصة بكل سهولة.
+      </p>
+      <div class="download-buttons">
+        <a href="#" class="btn appstore">
+          <i class="fab fa-apple"></i> App Store
+        </a>
+        <a href="#" class="btn googleplay">
+          <i class="fab fa-google-play"></i> Google Play
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   {{-- ——— Contact Info & Social ——— --}}
   <section id="contact-info" class="contact-info">
