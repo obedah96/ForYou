@@ -28,6 +28,30 @@ body { background: #fff; color: #333; line-height: 1.6; }
   direction: rtl;
 }
 
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;  /* top:0; right:0; bottom:0; left:0; */
+  /* غطاء ذهبي شفاف */
+  background: rgba(255, 215, 0, 0.2);
+  pointer-events: none;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;              /* سمك الخط */
+  background: darkgoldenrod; /* لون ذهبي غامق */
+  /* منحني ينحني للأعلى */
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  /* إذا احتجت انحناء أعمق عدّل القيمة الثانية (100%) */
+  pointer-events: none;
+}
+
 .hero-container {
   display: flex;
   flex-direction: row-reverse;
