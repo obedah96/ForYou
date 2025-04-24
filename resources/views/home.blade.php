@@ -23,7 +23,6 @@
 
 {{-- ——— Contact Hero ——— --}}
 <section class="contact-hero">
-  {{-- لا تحتاج إلى عنصر <img> للخلفية بعد الآن --}}
   <div class="container hero-container">
     {{-- ——— Left: one phone image ——— --}}
     <div class="phones">
