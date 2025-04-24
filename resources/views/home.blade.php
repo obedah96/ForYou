@@ -38,8 +38,8 @@
       </div>
     <div class="container hero-container">
       <div class="phones">
-        <img src="{{ asset('images/phone-back.jpeg') }}"  alt="Phone Back"  class="phone-back">
-        <img src="{{ asset('images/phone-front.jpeg') }}" alt="Phone Front" class="phone-front">
+        <img src="{{ asset('images/phoneback.jpeg') }}"  alt="Phone Back"  class="phone-back">
+        <img src="{{ asset('images/phonefront.jpeg') }}" alt="Phone Front" class="phone-front">
       </div>
       
     </div>
