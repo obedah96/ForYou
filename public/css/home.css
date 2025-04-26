@@ -257,16 +257,14 @@ body { background: #fff; color: #333; line-height: 1.6; }
 
 .categories-header h2 {
   display: inline-block;
-  background: #ffd166;
+  background: #d8600b;
   padding: 0.5rem 1rem;
-  border-radius: .25rem;
   margin-bottom: 1rem;
   color: #000;
   font-size: 1.75rem;
 }
 .categories-header p {
   max-width: 600px;
-  margin: .5rem auto 2rem;
   line-height: 1.6;
   color: #ccc;
 }
@@ -304,7 +302,6 @@ body { background: #fff; color: #333; line-height: 1.6; }
 .category-item {
   background: #1f1f1f;
   padding: 1.5rem;
-  border-radius: .75rem;
   display: flex;
   align-items: center;
   gap: 1.25rem;
