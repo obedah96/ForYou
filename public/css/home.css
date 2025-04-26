@@ -188,9 +188,49 @@ body { background: #fff; color: #333; line-height: 1.6; }
 .features-list li::before { content:""; position:absolute; width: .7rem; height: .7rem; background: #f59e0b; border-radius:50%; right:0; top:.4rem; }
 
 /* ===== CTA Download ===== */
-.cta-section { background: #fff9e6; text-align: center; padding: 3rem 0; }
-.store-links a { display: inline-block; margin: 0 1rem; }
-.store-links img { height: 3rem; }
+.cta-section { margin-top: 4rem; }
+.cta-top {background-color: #ffd166; padding: 4rem 0;}
+.cta-top h2 {font-size: 2rem;margin-bottom: 1rem;color: #000;}
+.cta-top p {color: #333;max-width: 700px;margin: 0.5rem auto 0;line-height: 1.6;}
+.cta-bottom {
+  position: relative;
+  background-color: #febe2c;
+  margin-top: -100px;              /* يرفع الجزء السفلي فوق العلوي */
+  padding: 6rem 0 3rem;            /* مساحة أعلى أكثر لأن المنحنى يأخذ مكان */
+  border-top-left-radius: 50% 100px;
+  border-top-right-radius: 50% 100px;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+.buttons-container {display: flex;justify-content: center;gap: 2rem;}
+.btn-store {
+  position: relative;
+  background: #ffd166;
+  color: #000;
+  padding: 1.5rem 2rem 1rem;      /* مسافة أعلى أكبر لعرض الـ label */
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.btn-store:hover {
+  background: #fec53b;
+}
+.btn-store .btn-label {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;                    /* لأن الصفحة RTL */
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #000;
+}
+.btn-store i {
+  font-size: 1.5rem;
+  line-height: 1;
+}
 
 /* ===== Contact Form ===== */
 .contact-form { background: #f9fafb; padding: 4rem 0; }
@@ -219,4 +259,14 @@ body { background: #fff; color: #333; line-height: 1.6; }
 @media (max-width: 600px) {
   .icon-wrapper { top: .75rem; left: .75rem; width: 2.5rem; height: 2.5rem; }
   .feature-item { padding: 1.5rem 1rem 1rem; }
+}
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cta-bottom {
+    margin-top: -80px;
+    padding-top: 5rem;
+  }
 }

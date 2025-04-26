@@ -103,17 +103,36 @@
     </div>
   </section>
 
-  {{-- ——— Call to Action ——— --}}
-  <section id="cta-download" class="cta-section">
-    <div class="container">
-      <h2>حمل تطبيقنا الآن</h2>
-      <p>افتح عالمًا من تجارب التسوّق والبيع السريع والآمن على هاتفك.</p>
-      <div class="store-links">
-        <a href="#"><img src="{{ asset('images/appstore.png') }}" alt="App Store"></a>
-        <a href="#"><img src="{{ asset('images/googleplay.png') }}" alt="Google Play"></a>
-      </div>
-    </div>
-  </section>
+        {{-- ——— Call to Action ——— --}}
+    <section id="cta-download" class="cta-section">
+        {{-- الجزء العلوي --}}
+        <div class="cta-top">
+            <div class="container text-center">
+            <h2>حمل تطبيقنا الآن</h2>
+            <p>
+                احصل على تطبيقنا الآن وافتح عالمًا من تجارب التسوق والبيع السلسة! 
+                استمتع بالوصول الفوري إلى المنتجات والمعاملات السريعة والآمنة.
+            </p>
+            </div>
+        </div>
+
+        {{-- الجزء السفلي المنحني --}}
+        <div class="cta-bottom">
+            <div class="container buttons-container">
+            <a href="#" class="btn-store">
+                <span class="btn-label">حمل من :</span>
+                <i class="fab fa-apple"></i>
+                <span>App Store</span>
+            </a>
+            <a href="#" class="btn-store">
+                <span class="btn-label">حمل من :</span>
+                <i class="fab fa-google-play"></i>
+                <span>Google Play</span>
+            </a>
+            </div>
+        </div>
+    </section>
+
 
   {{-- ——— Contact Form ——— --}}
   <section id="contact-form" class="contact-form">
