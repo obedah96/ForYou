@@ -21,36 +21,52 @@
     </div>
   </nav>
 
-{{-- ——— Contact Hero ——— --}}
-<section class="contact-hero">
-  <div class="container hero-container">
-    {{-- ——— Left: one phone image ——— --}}
-    <div class="phones">
-      <img src="{{ asset('images/phone-side.jpeg') }}"
-           alt="For You App Phone"
-           class="phone-side">
+    {{-- ——— Contact Hero ——— --}}
+    <section class="contact-hero">
+    <div class="container hero-container">
+        {{-- ——— Left: one phone image ——— --}}
+        <div class="phones">
+        <img src="{{ asset('images/phone-side.jpeg') }}"
+            alt="For You App Phone"
+            class="phone-side">
+        </div>
+
+        {{-- ——— Right: content ——— --}}
+        <div class="hero-content">
+        <h2>أفضل طريقة للتواصل مع العملاء</h2>
+        <p>
+            اكتشف التطبيق الرائد في سوريا الذي يسمح لك بالتسوّق لجميع المنتجات التي تريدها
+            وبيع منتجاتك الخاصة بكل سهولة.
+        </p>
+        <div class="download-buttons">
+            <a href="#" class="btn appstore">
+            <i class="fab fa-apple"></i> App Store
+            </a>
+            <a href="#" class="btn googleplay">
+            <i class="fab fa-google-play"></i> Google Play
+            </a>
+        </div>
+        </div>
     </div>
+    </section>
 
-    {{-- ——— Right: content ——— --}}
-    <div class="hero-content">
-      <h2>أفضل طريقة للتواصل مع العملاء</h2>
-      <p>
-        اكتشف التطبيق الرائد في سوريا الذي يسمح لك بالتسوّق لجميع المنتجات التي تريدها
-        وبيع منتجاتك الخاصة بكل سهولة.
-      </p>
-      <div class="download-buttons">
-        <a href="#" class="btn appstore">
-          <i class="fab fa-apple"></i> App Store
-        </a>
-        <a href="#" class="btn googleplay">
-          <i class="fab fa-google-play"></i> Google Play
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+    {{-- ——— Features ——— --}}
+    <section id="features" class="features-section">
+        <div class="container features-grid">
+        <div class="feature-item">
+            <h3>سهل الاستخدام</h3>
+            <p>يتميز تطبيقنا بسهولة التنقل وتصميمه الواضح، مما يجعل من السهل على المستخدمين العثور على ما يحتاجون إليه.</p>
+        </div>
+        <div class="feature-item">
+            <h3>أداء موثوق</h3>
+            <p>يعمل التطبيق بسلاسة مع الحد الأدنى من الأعطال وأوقات تحميل سريعة، مما يوفر تجربة مستخدم مستقرة.</p>
+        </div>
+        <div class="feature-item">
+            <h3>أمان قوي</h3>
+            <p>نعطي الأولوية لحماية البيانات من خلال تدابير أمنية قوية وتحديثات منتظمة لضمان سلامة المستخدم.</p>
+        </div>
+        </div>
+    </section>
   {{-- ——— Contact Info & Social ——— --}}
   <section id="contact-info" class="contact-info">
     <div class="container">
@@ -67,23 +83,7 @@
     </div>
   </section>
 
-  {{-- ——— Features ——— --}}
-  <section id="features" class="features-section">
-    <div class="container features-grid">
-      <div class="feature-item">
-        <h3>سهل الاستخدام</h3>
-        <p>يتميز تطبيقنا بسهولة التنقل وتصميمه الواضح، مما يجعل من السهل على المستخدمين العثور على ما يحتاجون إليه.</p>
-      </div>
-      <div class="feature-item">
-        <h3>أداء موثوق</h3>
-        <p>يعمل التطبيق بسلاسة مع الحد الأدنى من الأعطال وأوقات تحميل سريعة، مما يوفر تجربة مستخدم مستقرة.</p>
-      </div>
-      <div class="feature-item">
-        <h3>أمان قوي</h3>
-        <p>نعطي الأولوية لحماية البيانات من خلال تدابير أمنية قوية وتحديثات منتظمة لضمان سلامة المستخدم.</p>
-      </div>
-    </div>
-  </section>
+  
 
   {{-- ——— Shopping Experience ——— --}}
   <section class="shopping-experience">
