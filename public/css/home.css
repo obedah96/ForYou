@@ -134,13 +134,13 @@ body { background: #fff; color: #333; line-height: 1.6; }
 .feature-item::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;               /* بدل right */
-  width: 150%;
-  height: 150%;
+  top: 27%;
+  left: 20%;               /* بدل right */
+  width: 130%;
+  height: 130%;
   background: url('../images/logo-light.jpeg') center/contain no-repeat;
   opacity: 0.05;
-  transform: translate(-50%, -50%) rotate(15deg);  /* ناقص 50% ليعود للمركز */
+  transform: translate(-50%, -50%) rotate(0deg);  /* ناقص 50% ليعود للمركز */
   pointer-events: none;
   z-index: 0;              /* خلف المحتوى */
 }
