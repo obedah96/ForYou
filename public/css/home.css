@@ -334,6 +334,84 @@ body { background: #fff; color: #333; line-height: 1.6; }
   color: #ccc;
 }
 
+/* ===== Promo Section ===== */
+.promo-section {
+  background: linear-gradient(to right, #FFD166 0%, #F59E0C 100%);
+  padding: 2rem;
+}
+.promo-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* — Left column — */
+.promo-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo-img {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+.bottom-img {
+  max-width: 60%;
+  align-self: flex-start;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* — Center column — */
+.promo-content {
+  flex: 1;
+  text-align: center;
+  color: #111;
+}
+.promo-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.download-buttons {
+  display: inline-flex;
+  gap: 1rem;
+}
+.download-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+.download-buttons .btn:hover {
+  background: #f0f0f0;
+}
+
+/* — Right column — */
+.promo-image-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.side-img {
+  height: calc(100% - 4rem); /* subtract top/bottom padding */
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* ===== Footer ===== */
 .footer { background: #1f2937; color: #cbd5e1; text-align:center; padding:2rem 0; }
 .footer a { color: #cbd5e1; text-decoration: underline; }
@@ -366,5 +444,23 @@ body { background: #fff; color: #333; line-height: 1.6; }
   .phone-col {
     order: -1;
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .promo-section .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promo-left, .promo-image-right {
+    width: 100%;
+  }
+  .logo-img, .bottom-img {
+    margin: 0 auto;
+  }
+  .side-img {
+    margin: 1rem auto;
+    height: auto;
+    width: 80%;
   }
 }

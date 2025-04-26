@@ -133,63 +133,90 @@
         </div>
     </section>
 
-   {{-- ——— Categories ——— --}}
-<section id="categories" class="categories-section">
-  <div class="container">
-    {{-- عنوان وشرح --}}
-    <div class="categories-header text-center">
-      <h2>فئات التطبيق</h2>
-      <p>
-        استكشف الفئات الواسعة في تطبيقنا، من الإلكترونيات إلى الأدوات المنزلية، وابحث 
-        عن ما تحتاجه بالضبط.
-      </p>
+    {{-- ——— Categories ——— --}}
+    <section id="categories" class="categories-section">
+    <div class="container">
+        {{-- عنوان وشرح --}}
+        <div class="categories-header text-center">
+        <h2>فئات التطبيق</h2>
+        <p>
+            استكشف الفئات الواسعة في تطبيقنا، من الإلكترونيات إلى الأدوات المنزلية، وابحث 
+            عن ما تحتاجه بالضبط.
+        </p>
+        </div>
+
+        {{-- المحتوى الرئيسي: عمودان جانبيان مع صورة في الوسط --}}
+        <div class="categories-content">
+        {{-- العمود الأيسر --}}
+        <div class="categories-col">
+            <div class="category-item">
+            <div class="icon"><img src="{{ asset('images/estate.png') }}" alt=""></div>
+            <div class="text">
+                <h3>العقارات</h3>
+                <p>قم بشراء وبيع العقارات مثل المنازل والفيلات بكل سهولة من خلال تطبيقنا.</p>
+            </div>
+            </div>
+            <div class="category-item">
+            <div class="icon"><img src="{{ asset('images/housewares.png') }}" alt=""></div>
+            <div class="text">
+                <h3>الأدوات المنزلية</h3>
+                <p>قم بشراء وبيع الأدوات المنزلية بسرعة وسلاسة باستخدام تطبيقنا.</p>
+            </div>
+            </div>
+        </div>
+
+        {{-- العمود الأوسط: صورة الهاتف --}}
+        <div class="categories-col phone-col">
+            <img src="{{ asset('images/phone-mid.jpeg') }}" alt="App Phone">
+        </div>
+
+        {{-- العمود الأيمن --}}
+        <div class="categories-col">
+            <div class="category-item">
+            <div class="icon"><img src="{{ asset('images/cars.png') }}" alt=""></div>
+            <div class="text">
+                <h3>السيارات</h3>
+                <p>قم بشراء وبيع السيارات بكل سهولة وسرعة باستخدام تطبيقنا.</p>
+            </div>
+            </div>
+            <div class="category-item">
+            <div class="icon"><img src="{{ asset('images/electronic.png') }}" alt=""></div>
+            <div class="text">
+                <h3>الإلكترونيات</h3>
+                <p>قم بشراء وبيع الأجهزة الإلكترونية مثل الهواتف والحواسيب بسرعة وسهولة.</p>
+            </div>
+            </div>
+        </div>
+        </div>
     </div>
+    </section>
 
-    {{-- المحتوى الرئيسي: عمودان جانبيان مع صورة في الوسط --}}
-    <div class="categories-content">
-      {{-- العمود الأيسر --}}
-      <div class="categories-col">
-        <div class="category-item">
-          <div class="icon"><img src="{{ asset('images/estate.png') }}" alt=""></div>
-          <div class="text">
-            <h3>العقارات</h3>
-            <p>قم بشراء وبيع العقارات مثل المنازل والفيلات بكل سهولة من خلال تطبيقنا.</p>
-          </div>
+    <section class="promo-section">
+    <div class="container">
+        <!-- Left column: logo and bottom image -->
+        <div class="promo-left">
+        <img src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="logo-img">
+        <img src="{{ asset('images/phone-side.jpeg') }}" alt="Promo Graphic" class="bottom-img">
         </div>
-        <div class="category-item">
-          <div class="icon"><img src="{{ asset('images/housewares.png') }}" alt=""></div>
-          <div class="text">
-            <h3>الأدوات المنزلية</h3>
-            <p>قم بشراء وبيع الأدوات المنزلية بسرعة وسلاسة باستخدام تطبيقنا.</p>
-          </div>
-        </div>
-      </div>
 
-      {{-- العمود الأوسط: صورة الهاتف --}}
-      <div class="categories-col phone-col">
-        <img src="{{ asset('images/phone-mid.jpeg') }}" alt="App Phone">
-      </div>
+        <!-- Center column: text and buttons -->
+        <div class="promo-content">
+            <h1>قريبا !</h1>
+            <h1>باقات الاعلانية</h1>
+        <h2> عمليات بيع أسرع</h2>
+        <div class="download-buttons">
+            <a href="#" class="btn appstore"><i class="fab fa-apple"></i> App Store</a>
+            <a href="#" class="btn googleplay"><i class="fab fa-google-play"></i> Google Play</a>
+        </div>
+        </div>
 
-      {{-- العمود الأيمن --}}
-      <div class="categories-col">
-        <div class="category-item">
-          <div class="icon"><img src="{{ asset('images/cars.png') }}" alt=""></div>
-          <div class="text">
-            <h3>السيارات</h3>
-            <p>قم بشراء وبيع السيارات بكل سهولة وسرعة باستخدام تطبيقنا.</p>
-          </div>
+        <!-- Right column: full-height image -->
+        <div class="promo-image-right">
+        <img src="{{ asset('images/promo-side.jpeg') }}" alt="Promo Side" class="side-img">
         </div>
-        <div class="category-item">
-          <div class="icon"><img src="{{ asset('images/electronic.png') }}" alt=""></div>
-          <div class="text">
-            <h3>الإلكترونيات</h3>
-            <p>قم بشراء وبيع الأجهزة الإلكترونية مثل الهواتف والحواسيب بسرعة وسهولة.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+    </section>
+
 
 
 
