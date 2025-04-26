@@ -50,23 +50,36 @@
     </div>
     </section>
 
-    {{-- ——— Features ——— --}}
     <section id="features" class="features-section">
-        <div class="container features-grid">
-        <div class="feature-item">
-            <h3>سهل الاستخدام</h3>
-            <p>يتميز تطبيقنا بسهولة التنقل وتصميمه الواضح، مما يجعل من السهل على المستخدمين العثور على ما يحتاجون إليه.</p>
-        </div>
-        <div class="feature-item">
-            <h3>أداء موثوق</h3>
-            <p>يعمل التطبيق بسلاسة مع الحد الأدنى من الأعطال وأوقات تحميل سريعة، مما يوفر تجربة مستخدم مستقرة.</p>
-        </div>
-        <div class="feature-item">
-            <h3>أمان قوي</h3>
-            <p>نعطي الأولوية لحماية البيانات من خلال تدابير أمنية قوية وتحديثات منتظمة لضمان سلامة المستخدم.</p>
-        </div>
-        </div>
-    </section>
+  <div class="container features-grid">
+
+    <div class="feature-item">
+      <div class="icon-wrapper">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+      </div>
+      <h3>سهل الاستخدام</h3>
+      <p>يتميز تطبيقنا بسهولة التنقل وتصميمه الواضح، مما يجعل من السهل على المستخدمين العثور على ما يحتاجون إليه.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-wrapper">
+        <i class="fa-solid fa-chart-line-up"></i>
+      </div>
+      <h3>أداء موثوق</h3>
+      <p>يعمل التطبيق بسلاسة مع الحد الأدنى من الأعطال وأوقات تحميل سريعة، مما يوفر تجربة مستخدم مستقرة.</p>
+    </div>
+
+    <div class="feature-item">
+      <div class="icon-wrapper">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <h3>أمان قوي</h3>
+      <p>نعطي الأولوية لحماية البيانات من خلال تدابير أمنية قوية وتحديثات منتظمة لضمان سلامة المستخدم.</p>
+    </div>
+
+  </div>
+</section>
+
   
 
   {{-- ——— Shopping Experience ——— --}}
