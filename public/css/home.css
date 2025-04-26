@@ -19,6 +19,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
   position: relative;
   /* خلفية + تعتيم برتقالي شفاف */
   background:
+    linear-gradient(rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.2)),
     linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
     url('../images/hand.jpeg') center/cover no-repeat;
   padding: 4rem 0;
@@ -26,15 +27,6 @@ body { background: #fff; color: #333; line-height: 1.6; }
   overflow: hidden;
   color: #fff;
   direction: rtl;
-}
-
-.contact-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;  /* top:0; right:0; bottom:0; left:0; */
-  /* غطاء ذهبي شفاف */
-  background: rgba(255, 215, 0, 0.2);
-  pointer-events: none;
 }
 
 .contact-hero::after {
