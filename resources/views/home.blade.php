@@ -67,22 +67,6 @@
         </div>
         </div>
     </section>
-  {{-- ——— Contact Info & Social ——— --}}
-  <section id="contact-info" class="contact-info">
-    <div class="container">
-      <p>الوصول إلينا :</p>
-      <p>سوريا، دمشق</p>
-      <p>info@foryou.net</p>
-      <p>+963 944 33 2334</p>
-      <p>تابعنا على شبكات التواصل الاجتماعي:</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
-
   
 
   {{-- ——— Shopping Experience ——— --}}
@@ -155,6 +139,21 @@
       <div class="category-item">
         <h3>الأدوات المنزلية</h3>
         <p>أسرة، أرائك، أدوات مطبخ وأكثر.</p>
+      </div>
+    </div>
+  </section>
+  {{-- ——— Contact Info & Social ——— --}}
+  <section id="contact-info" class="contact-info">
+    <div class="container">
+      <p>الوصول إلينا :</p>
+      <p>سوريا، دمشق</p>
+      <p>info@foryou.net</p>
+      <p>+963 944 33 2334</p>
+      <p>تابعنا على شبكات التواصل الاجتماعي:</p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
   </section>
