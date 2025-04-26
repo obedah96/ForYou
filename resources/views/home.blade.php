@@ -192,29 +192,29 @@
     </section>
 
     <section class="promo-section">
-    <div class="container">
-        <!-- Left column: logo and bottom image -->
-        <div class="promo-left">
-        <img src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="logo-img">
-        <img src="{{ asset('images/phone-side.jpeg') }}" alt="Promo Graphic" class="bottom-img">
-        </div>
+        <div class="container">
+            <!-- Left column: logo and bottom image -->
+            <div class="promo-left">
+                <img src="{{ asset('images/logo.jpeg') }}" alt="Logo" class="logo-img">
+                <img src="{{ asset('images/phone-side.jpeg') }}" alt="Promo Graphic" class="bottom-img">
+            </div>
 
-        <!-- Center column: text and buttons -->
-        <div class="promo-content">
-            <h1>قريبا !</h1>
-            <h1>باقات الاعلانية</h1>
-        <h2> عمليات بيع أسرع</h2>
-        <div class="download-buttons">
-            <a href="#" class="btn appstore"><i class="fab fa-apple"></i> App Store</a>
-            <a href="#" class="btn googleplay"><i class="fab fa-google-play"></i> Google Play</a>
-        </div>
-        </div>
+            <!-- Center column: text and buttons -->
+            <div class="promo-content">
+                <h1>قريبا !</h1>
+                <h1>باقات الاعلانية</h1>
+                <h2> عمليات بيع أسرع</h2>
+                <div class="download-buttons">
+                    <a href="#" class="btn appstore"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="#" class="btn googleplay"><i class="fab fa-google-play"></i> Google Play</a>
+                </div>
+                </div>
 
-        <!-- Right column: full-height image -->
-        <div class="promo-image-right">
-        <img src="{{ asset('images/promo-side.jpeg') }}" alt="Promo Side" class="side-img">
+                <!-- Right column: full-height image -->
+                <div class="promo-image-right">
+                <img src="{{ asset('images/promo-side.jpeg') }}" alt="Promo Side" class="side-img">
+            </div>
         </div>
-    </div>
     </section>
 
 
