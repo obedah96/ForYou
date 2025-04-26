@@ -133,6 +133,65 @@
         </div>
     </section>
 
+   {{-- ——— Categories ——— --}}
+<section id="categories" class="categories-section">
+  <div class="container">
+    {{-- عنوان وشرح --}}
+    <div class="categories-header text-center">
+      <h2>فئات التطبيق</h2>
+      <p>
+        استكشف الفئات الواسعة في تطبيقنا، من الإلكترونيات إلى الأدوات المنزلية، وابحث 
+        عن ما تحتاجه بالضبط.
+      </p>
+    </div>
+
+    {{-- المحتوى الرئيسي: عمودان جانبيان مع صورة في الوسط --}}
+    <div class="categories-content">
+      {{-- العمود الأيسر --}}
+      <div class="categories-col">
+        <div class="category-item">
+          <div class="icon"><img src="{{ asset('images/estate.png') }}" alt=""></div>
+          <div class="text">
+            <h3>العقارات</h3>
+            <p>قم بشراء وبيع العقارات مثل المنازل والفيلات بكل سهولة من خلال تطبيقنا.</p>
+          </div>
+        </div>
+        <div class="category-item">
+          <div class="icon"><img src="{{ asset('images/housewares.png') }}" alt=""></div>
+          <div class="text">
+            <h3>الأدوات المنزلية</h3>
+            <p>قم بشراء وبيع الأدوات المنزلية بسرعة وسلاسة باستخدام تطبيقنا.</p>
+          </div>
+        </div>
+      </div>
+
+      {{-- العمود الأوسط: صورة الهاتف --}}
+      <div class="categories-col phone-col">
+        <img src="{{ asset('images/phone-mid.jpeg') }}" alt="App Phone">
+      </div>
+
+      {{-- العمود الأيمن --}}
+      <div class="categories-col">
+        <div class="category-item">
+          <div class="icon"><img src="{{ asset('images/cars.png') }}" alt=""></div>
+          <div class="text">
+            <h3>السيارات</h3>
+            <p>قم بشراء وبيع السيارات بكل سهولة وسرعة باستخدام تطبيقنا.</p>
+          </div>
+        </div>
+        <div class="category-item">
+          <div class="icon"><img src="{{ asset('images/electronic.png') }}" alt=""></div>
+          <div class="text">
+            <h3>الإلكترونيات</h3>
+            <p>قم بشراء وبيع الأجهزة الإلكترونية مثل الهواتف والحواسيب بسرعة وسهولة.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   {{-- ——— Contact Form ——— --}}
   <section id="contact-form" class="contact-form">
@@ -153,27 +212,7 @@
     </div>
   </section>
 
-  {{-- ——— Categories ——— --}}
-  <section id="categories" class="categories-section">
-    <div class="container categories-grid">
-      <div class="category-item">
-        <h3>السيارات</h3>
-        <p>شراء وبيع السيارات بسهولة وسرعة.</p>
-      </div>
-      <div class="category-item">
-        <h3>الإلكترونيات</h3>
-        <p>هواتف، حواسيب، سماعات وما إلى ذلك.</p>
-      </div>
-      <div class="category-item">
-        <h3>العقارات</h3>
-        <p>منازل، فيلات، وشقق للبيع والشراء.</p>
-      </div>
-      <div class="category-item">
-        <h3>الأدوات المنزلية</h3>
-        <p>أسرة، أرائك، أدوات مطبخ وأكثر.</p>
-      </div>
-    </div>
-  </section>
+  
   {{-- ——— Contact Info & Social ——— --}}
   <section id="contact-info" class="contact-info">
     <div class="container">
