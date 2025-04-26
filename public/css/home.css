@@ -130,21 +130,21 @@ body { background: #fff; color: #333; line-height: 1.6; }
 /* ===== Features ===== */
 .features-section { background: #111; padding: 4rem 0; }
 .features-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 2rem; }
-.feature-item {position: relative; background: #1f1f1f; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);color: #f1f1f1; }
+.feature-item {position: relative;z-index: 1;overflow: hidden; background: #1f1f1f; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05);color: #f1f1f1; }
 .feature-item::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 50%;
+  left: 50%;               /* بدل right */
   width: 150%;
   height: 150%;
-  background: url('../images/logo-light.svg') center/contain no-repeat;
+  background: url('../images/logo-light.jpeg') center/contain no-repeat;
   opacity: 0.05;
-  transform: translate(50%, -50%) rotate(15deg);
+  transform: translate(-50%, -50%) rotate(15deg);  /* ناقص 50% ليعود للمركز */
   pointer-events: none;
+  z-index: 0;              /* خلف المحتوى */
 }
 .icon-wrapper {
-  position: absolute;
   top: 1rem;
   left: 1rem;                   /* لو كانت RTL اجعلها right:1rem */
   width: 3rem;
