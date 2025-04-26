@@ -137,7 +137,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
   top: 27%;
   left: 20%;               /* بدل right */
   width: 130%;
-  height: 130%;
+  height: 150%;
   background: url('../images/logo-light.jpeg') center/contain no-repeat;
   opacity: 0.05;
   transform: translate(-50%, -50%) rotate(0deg);  /* ناقص 50% ليعود للمركز */
