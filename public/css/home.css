@@ -338,6 +338,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
 .promo-section {
   background: linear-gradient(to right, #FFD166 0%, #F59E0C 100%);
   padding: 2rem;
+  height: 600 px;
 }
 .promo-section .container {
   display: flex;
@@ -405,7 +406,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
 }
 .side-img {
   height: calc(100% - 4rem); /* subtract top/bottom padding */
-  max-height: 400px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
