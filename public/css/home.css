@@ -188,18 +188,13 @@ body { background: #fff; color: #333; line-height: 1.6; }
 .features-list li::before { content:""; position:absolute; width: .7rem; height: .7rem; background: #f59e0b; border-radius:50%; right:0; top:.4rem; }
 
 /* ===== CTA Download ===== */
-.cta-section { margin-top: 4rem; }
-.cta-top {background-color: #ffd166; padding: 4rem 0;}
+
+.cta-top {background-color: #ffd166; padding: 4rem 0; border-bottom-left-radius: 50% 100px;border-bottom-right-radius: 50% 100px;}
 .cta-top h2 {font-size: 2rem;margin-bottom: 1rem;color: #000;}
 .cta-top p {color: #333;max-width: 700px;margin: 0.5rem auto 0;line-height: 1.6;}
 .cta-bottom {
   position: relative;
-  background-color: #febe2c;
-  margin-top: -100px;              /* يرفع الجزء السفلي فوق العلوي */
-  padding: 6rem 0 3rem;            /* مساحة أعلى أكثر لأن المنحنى يأخذ مكان */
-  border-top-left-radius: 50% 100px;
-  border-top-right-radius: 50% 100px;
-  box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+  background-color: #febe2c; margin-top: -100px;  padding: 6rem 0 3rem;            /* مساحة أعلى أكثر لأن المنحنى يأخذ مكان */
 }
 .buttons-container {display: flex;justify-content: center;gap: 2rem;}
 .btn-store {
