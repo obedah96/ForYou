@@ -85,7 +85,7 @@
         </ul>
       </div>
       <div class="phones-single">
-        <img src="{{ asset('images/phones.jpeg') }}" alt="For You App Phones">
+        <img src="{{ asset('images/phones.jpeg') }}" alt="For You App Phones" class="phones-image">
       </div>
     </div>
   </section>
