@@ -223,28 +223,46 @@
         </div>
     </section>
 
+    <section id="contact-form" class="contact-section">
+  <div class="container contact-container">
 
+    <!-- اليسار: صورة -->
+    <div class="contact-image">
+      <img src="{{ asset('images/contact.jpg') }}" alt="Contact">
+    </div>
 
+    <!-- اليمين: المحتوى والنموذج -->
+    <div class="contact-content">
+      <h2>التواصل</h2>
+      <p class="intro">
+        تواصل معنا لأي استفسارات أو تعليقات أو دعم، نحن هنا لمساعدتك!
+      </p>
 
-
-  {{-- ——— Contact Form ——— --}}
-  <section id="contact-form" class="contact-form">
-    <div class="container">
-      <h2>تواصل معنا</h2>
       <form action="#" method="POST" class="form-wrapper">
         @csrf
-        <label for="email">الايميل</label>
-        <input type="email" id="email" name="email" required placeholder="example@domain.com">
-        <label for="name">الاسم</label>
-        <input type="text" id="name" name="name" required placeholder="اسمك">
-        <label for="subject">الموضوع</label>
-        <input type="text" id="subject" name="subject" required placeholder="موضوع الرسالة">
-        <label for="message">الرسالة</label>
-        <textarea id="message" name="message" rows="4" required placeholder="نص الرسالة..."></textarea>
-        <button type="submit" class="btn-submit">أرسل الرسالة</button>
+
+        <div class="row two-cols">
+          <input type="text" name="name" id="name" placeholder="الاسم" required>
+          <input type="email" name="email" id="email" placeholder="الايميل" required>
+        </div>
+
+        <div class="row">
+          <input type="text" name="subject" id="subject" placeholder="الموضوع" required>
+        </div>
+
+        <div class="row">
+          <textarea name="message" id="message" rows="6" placeholder="اكتب الرسالة هنا" required></textarea>
+        </div>
+
+        <div class="row">
+          <button type="submit" class="btn-submit">أرسل الرسالة</button>
+        </div>
       </form>
     </div>
-  </section>
+
+  </div>
+</section>
+
 
   
   {{-- ——— Contact Info & Social ——— --}}

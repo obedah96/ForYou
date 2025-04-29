@@ -440,6 +440,108 @@ body { background: #fff; color: #333; line-height: 1.6; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
+/* ===== Contact Section ===== */
+.contact-section {
+  background: #111;
+  padding: 4rem 0;
+  direction: rtl;
+}
+.contact-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* — الصورة على اليسار — */
+.contact-image {
+  flex: 1;
+}
+.contact-image img {
+  width: 100%;
+  border-radius: .75rem;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* — المحتوى على اليمين — */
+.contact-content {
+  flex: 1;
+  color: #fff;
+}
+.contact-content h2 {
+  display: inline-block;
+  background: #ffd166;
+  color: #000;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-content .intro {
+  margin-bottom: 2rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* — النموذج — */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.row.two-cols {
+  display: flex;
+  gap: 1rem;
+}
+.row.two-cols input {
+  flex: 1;
+}
+.row input,
+.row textarea {
+  width: 100%;
+  background: #2b2b2b;
+  border: none;
+  border-radius: .5rem;
+  padding: .75rem 1rem;
+  color: #eee;
+  font-size: 1rem;
+  resize: vertical;
+}
+.row input::placeholder,
+.row textarea::placeholder {
+  color: #777;
+}
+
+/* — زر الإرسال — */
+.btn-submit {
+  align-self: flex-end;
+  background: #ffd166;
+  color: #000;
+  border: none;
+  padding: .75rem 2rem;
+  font-size: 1rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+.btn-submit:hover {
+  background: #f4a261;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .row.two-cols {
+    flex-direction: column;
+  }
+  .btn-submit {
+    align-self: center;
+  }
+}
+
+
 /* ===== Footer ===== */
 .footer { background: #1f2937; color: #cbd5e1; text-align:center; padding:2rem 0; }
 .footer a { color: #cbd5e1; text-decoration: underline; }
