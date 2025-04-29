@@ -448,6 +448,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
 }
 .contact-container {
   display: flex;
+  flex-direction: row-reverse;
   align-items: flex-start;
   gap: 2rem;
 }
