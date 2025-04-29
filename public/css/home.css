@@ -550,7 +550,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
   background: linear-gradient(to bottom, #ffd166 0%, #f59e0b 100%);
   padding: 4rem 2rem;
   color: #111;
-  direction: rtl;
+  direction: ltr;
   overflow: hidden;
 }
 /* شفافية الشعار الكبير بالخلف */
@@ -572,6 +572,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
   gap: 2rem;
 }
 .footer-col {
+  direction: rtl;
   flex: 1;
 }
 
