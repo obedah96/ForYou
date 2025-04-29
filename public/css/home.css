@@ -336,19 +336,20 @@ body { background: #fff; color: #333; line-height: 1.6; }
 
 /* ===== Promo Section ===== */
 .promo-section {
-  background: linear-gradient(to right, #FFD166 0%, #F59E0C 100%);
-  padding: 2rem;
-  height: 600 px;
+  background: linear-gradient(to bottom right, #ffd166 0%, #f59e0b 100%);
+  padding: 3rem 2rem;
+  direction: rtl;
+  color: #111;
 }
 .promo-section .container {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
-/* — Left column — */
+/* يسار */
 .promo-left {
   flex: 1;
   display: flex;
@@ -356,62 +357,75 @@ body { background: #fff; color: #333; line-height: 1.6; }
   justify-content: space-between;
 }
 .logo-img {
-  max-width: 120px;
+  width: 100px;
   margin-bottom: 1rem;
 }
-.bottom-img {
-  max-width: 60%;
-  align-self: flex-start;
-  margin-top: 1rem;
-  border-radius: 0.5rem;
+.bottom-phones {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+.bottom-phones img {
+  width: 100px;
+  border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* — Center column — */
-.promo-content {
+/* الوسط */
+.promo-center {
   flex: 1;
   text-align: center;
-  color: #111;
 }
-.promo-content h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+.promo-center h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.promo-center h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.promo-center h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.promo-center .download-text {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 .download-buttons {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   gap: 1rem;
 }
 .download-buttons .btn {
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #fff;
-  color: #111;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: background 0.2s;
+  font-size: 1rem;
 }
 .download-buttons .btn:hover {
-  background: #f0f0f0;
+  background: #333;
 }
 
-/* — Right column — */
-.promo-image-right {
+/* يمين */
+.promo-right {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
-.side-img {
-  height: calc(100% - 4rem); /* subtract top/bottom padding */
+.main-phone-img {
   max-height: 500px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  width: auto;
+  object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
 /* ===== Footer ===== */
