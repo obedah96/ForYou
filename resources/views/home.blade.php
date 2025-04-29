@@ -271,12 +271,12 @@
       <div class="footer-title">روابط التنزيل:</div>
       <div class="download-buttons">
         <a href="#" class="btn appstore">
-          <span class="btn-small">حمل من :</span><br>
-          <i class="fab fa-apple"></i> App Store
+          <span class="btn-small">حمل من :</span>
+          <span class="btn-main"><i class="fab fa-apple"></i> App Store </span> 
         </a>
         <a href="#" class="btn googleplay">
-          <span class="btn-small">حمل من :</span><br>
-          <i class="fab fa-google-play"></i> Google Play
+          <span class="btn-small">حمل من :</span>
+          <span class="btn-main"><i class="fab fa-google-play"></i> Google Play</span>
         </a>
       </div>
       <div class="qr-codes">

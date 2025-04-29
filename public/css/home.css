@@ -613,6 +613,11 @@ body { background: #fff; color: #333; line-height: 1.6; }
   font-weight: 400;
   margin-bottom: .25rem;
 }
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
 /* — QR Codes — */
 .qr-codes {
