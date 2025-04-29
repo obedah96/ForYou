@@ -228,7 +228,7 @@
 
     <!-- اليسار: صورة -->
     <div class="contact-image">
-      <img src="{{ asset('images/contact.jpg') }}" alt="Contact">
+      <img src="{{ asset('images/contact.png') }}" alt="Contact">
     </div>
 
     <!-- اليمين: المحتوى والنموذج -->
