@@ -223,71 +223,96 @@
         </div>
     </section>
 
-    <section id="contact-form" class="contact-section">
-  <div class="container contact-container">
+        <section id="contact-form" class="contact-section">
+        <div class="container contact-container">
 
-    <!-- اليسار: صورة -->
-    <div class="contact-image">
-      <img src="{{ asset('images/contact.png') }}" alt="Contact">
+            <!-- اليسار: صورة -->
+            <div class="contact-image">
+            <img src="{{ asset('images/contact.png') }}" alt="Contact">
+            </div>
+
+            <!-- اليمين: المحتوى والنموذج -->
+            <div class="contact-content">
+            <h2>التواصل</h2>
+            <p class="intro">
+                تواصل معنا لأي استفسارات أو تعليقات أو دعم، نحن هنا لمساعدتك!
+            </p>
+
+            <form action="#" method="POST" class="form-wrapper">
+                @csrf
+
+                <div class="row two-cols">
+                <input type="text" name="name" id="name" placeholder="الاسم" required>
+                <input type="email" name="email" id="email" placeholder="الايميل" required>
+                </div>
+
+                <div class="row">
+                <input type="text" name="subject" id="subject" placeholder="الموضوع" required>
+                </div>
+
+                <div class="row">
+                <textarea name="message" id="message" rows="6" placeholder="اكتب الرسالة هنا" required></textarea>
+                </div>
+
+                <div class="row">
+                <button type="submit" class="btn-submit">أرسل الرسالة</button>
+                </div>
+            </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer-section">
+  <div class="container footer-grid">
+
+    {{-- LEFT: Download Links & QR --}}
+    <div class="footer-col footer-left">
+      <div class="footer-title">روابط التنزيل:</div>
+      <div class="download-buttons">
+        <a href="#" class="btn appstore">
+          <span class="btn-small">حمل من :</span>
+          <i class="fab fa-apple"></i> App Store
+        </a>
+        <a href="#" class="btn googleplay">
+          <span class="btn-small">حمل من :</span>
+          <i class="fab fa-google-play"></i> Google Play
+        </a>
+      </div>
+      <div class="qr-codes">
+        <img src="{{ asset('images/qr-appstore.png') }}" alt="QR App Store">
+        <img src="{{ asset('images/qr-googleplay.png') }}" alt="QR Google Play">
+      </div>
+      <a href="#" class="btn direct-download">
+        <i class="fas fa-download"></i> تحميل مباشر
+      </a>
     </div>
 
-    <!-- اليمين: المحتوى والنموذج -->
-    <div class="contact-content">
-      <h2>التواصل</h2>
-      <p class="intro">
-        تواصل معنا لأي استفسارات أو تعليقات أو دعم، نحن هنا لمساعدتك!
-      </p>
+    {{-- CENTER: Contact Info --}}
+    <div class="footer-col footer-center">
+      <div class="footer-title">الوصول إلينا :</div>
+      <p>العنوان: سوريا، دمشق</p>
+      <p>info@foryou.net</p>
+      <p>+963 944 33 2334</p>
+    </div>
 
-      <form action="#" method="POST" class="form-wrapper">
-        @csrf
-
-        <div class="row two-cols">
-          <input type="text" name="name" id="name" placeholder="الاسم" required>
-          <input type="email" name="email" id="email" placeholder="الايميل" required>
-        </div>
-
-        <div class="row">
-          <input type="text" name="subject" id="subject" placeholder="الموضوع" required>
-        </div>
-
-        <div class="row">
-          <textarea name="message" id="message" rows="6" placeholder="اكتب الرسالة هنا" required></textarea>
-        </div>
-
-        <div class="row">
-          <button type="submit" class="btn-submit">أرسل الرسالة</button>
-        </div>
-      </form>
+    {{-- RIGHT: Logo & Social --}}
+    <div class="footer-col footer-right">
+      <img src="{{ asset('images/logo.jpeg') }}" alt="For You" class="footer-logo">
+      <div class="social-text">لا تنسى المتابعة على الصفحات التواصل الاجتماعي:</div>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="footer-legal">
+        <a href="#">الشروط والخصوصية</a>
+        <p>© 2024 ForYou. جميع الحقوق محفوظة.</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-
-  
-  {{-- ——— Contact Info & Social ——— --}}
-  <section id="contact-info" class="contact-info">
-    <div class="container">
-      <p>الوصول إلينا :</p>
-      <p>سوريا، دمشق</p>
-      <p>info@foryou.net</p>
-      <p>+963 944 33 2334</p>
-      <p>تابعنا على شبكات التواصل الاجتماعي:</p>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-  </section>
-
-  {{-- ——— Footer ——— --}}
-  <footer class="footer">
-    <div class="container">
-      <p>© 2024 ForYou. جميع الحقوق محفوظة.</p>
-      <a href="#">الشروط والخصوصية</a>
-    </div>
-  </footer>
 
 </body>
 </html>

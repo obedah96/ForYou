@@ -544,9 +544,173 @@ body { background: #fff; color: #333; line-height: 1.6; }
 }
 
 
-/* ===== Footer ===== */
-.footer { background: #1f2937; color: #cbd5e1; text-align:center; padding:2rem 0; }
-.footer a { color: #cbd5e1; text-decoration: underline; }
+/* ===== Footer Section ===== */
+.footer-section {
+  position: relative;
+  background: linear-gradient(to bottom, #ffd166 0%, #f59e0b 100%);
+  padding: 4rem 2rem;
+  color: #111;
+  direction: rtl;
+  overflow: hidden;
+}
+/* شفافية الشعار الكبير بالخلف */
+.footer-section::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  background: url('../images/logo.jpeg') center/contain no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* Grid ثلاثي الأعمدة */
+.footer-grid {
+  display: flex;
+  gap: 2rem;
+}
+.footer-col {
+  flex: 1;
+}
+
+/* — Titles — */
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* — Download Buttons — */
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.download-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #fff;
+  color: #111;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background .2s;
+}
+.download-buttons .btn:hover {
+  background: #f0f0f0;
+}
+/* النص الصغير */
+.btn-small {
+  display: block;
+  font-size: .75rem;
+  font-weight: 400;
+  margin-bottom: .25rem;
+}
+
+/* — QR Codes — */
+.qr-codes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.qr-codes img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background: #fff;
+  padding: .25rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* — Direct Download Button — */
+.direct-download {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #000;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background .2s;
+}
+.direct-download:hover {
+  background: #333;
+}
+
+/* — Contact Center — */
+.footer-center p {
+  margin: .5rem 0;
+  line-height: 1.6;
+}
+
+/* — Right Column — */
+.footer-logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+.social-text {
+  margin: .5rem 0;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.social-links a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  transition: background .2s;
+}
+.social-links a:hover {
+  background: #333;
+}
+
+/* — Legal — */
+.footer-legal {
+  margin-top: 2rem;
+}
+.footer-legal a {
+  color: #111;
+  text-decoration: underline;
+  margin-bottom: .5rem;
+  display: inline-block;
+}
+.footer-legal p {
+  margin: .25rem 0 0;
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .footer-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-section::before {
+    display: none;
+  }
+  .download-buttons { justify-content: center; }
+  .qr-codes { justify-content: center; }
+  .social-links { justify-content: center; }
+}
+
 
 /* ===== Responsive ===== */
 @media(max-width:992px) {
