@@ -271,11 +271,11 @@
       <div class="footer-title">روابط التنزيل:</div>
       <div class="download-buttons">
         <a href="#" class="btn appstore">
-          <span class="btn-small">حمل من :</span>
+          <span class="btn-small">حمل من :</span><br>
           <i class="fab fa-apple"></i> App Store
         </a>
         <a href="#" class="btn googleplay">
-          <span class="btn-small">حمل من :</span>
+          <span class="btn-small">حمل من :</span><br>
           <i class="fab fa-google-play"></i> Google Play
         </a>
       </div>
