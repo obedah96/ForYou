@@ -591,13 +591,15 @@ body { background: #fff; color: #333; line-height: 1.6; }
   margin-bottom: 1rem;
 }
 .download-buttons .btn {
+  flex-direction: column;
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  background: #fff;
+  background: #f59e0b;
   color: #111;
-  padding: .5rem 1rem;
-  border-radius: .5rem;
+  width: 97px;
+  height: 50px;
+  border-radius: 1.5rem;
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -612,11 +614,14 @@ body { background: #fff; color: #333; line-height: 1.6; }
   font-size: .75rem;
   font-weight: 400;
   margin-bottom: .25rem;
+  margin-top: -9px;
 }
 .btn-main {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: x-small;
+  margin: -13px;
 }
 
 /* — QR Codes — */
