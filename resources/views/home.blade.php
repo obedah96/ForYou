@@ -269,7 +269,7 @@
     {{-- LEFT: Download Links & QR --}}
     <div class="footer-col footer-left">
       <div class="footer-title">روابط التنزيل:</div>
-      <div class="download-buttons">
+      <div class="download-buttons-f">
         <a href="#" class="btn appstore">
           <span class="btn-small">حمل من :</span>
           <span class="btn-main"><i class="fab fa-apple"></i> App Store </span> 

@@ -584,13 +584,13 @@ body { background: #fff; color: #333; line-height: 1.6; }
 }
 
 /* — Download Buttons — */
-.download-buttons {
+.download-buttons-f {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
-.download-buttons .btn {
+.download-buttons-f .btn {
   flex-direction: column;
   display: inline-flex;
   align-items: center;
@@ -605,7 +605,7 @@ body { background: #fff; color: #333; line-height: 1.6; }
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: background .2s;
 }
-.download-buttons .btn:hover {
+.download-buttons-f .btn:hover {
   background: #f0f0f0;
 }
 /* النص الصغير */
