@@ -13,7 +13,6 @@ use App\Http\Controllers\CarsControllers\CarController;
 use App\Http\Controllers\ElectricalApplianceControllers\ElectricalApplianceController;
 use App\Http\Controllers\HomeApplianceControllers\HomeApplianceController;
 use App\Http\Controllers\RealEstateControllers\RealEstateController;
-use App\Http\Controllers\AdminControllers\AdminLoginController;
 route::get('/hello',function(){return "hello to api part";});
 Route::get('/user', function (Request $request) {
     return $request->user();
