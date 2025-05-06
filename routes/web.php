@@ -18,6 +18,7 @@ Route::middleware([
 Route::get('dashboard',function(){
     return view('admin.dashboard'); 
 })->name('dashboard');
+Route::view('/dashboard/home','dashboard-home')->name('dashboard.home');
 
 Route::get('/', function () {
     return view('home');
