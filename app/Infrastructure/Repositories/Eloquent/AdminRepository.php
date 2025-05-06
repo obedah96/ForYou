@@ -2,7 +2,7 @@
 namespace App\Infrastructure\Repositories\Eloquent;
 
 use App\Infrastructure\Repositories\Interfaces\AdminRepositoryInterface;
-use APP\Domain\Entities\Admin;
+use App\Domain\Entities\Admin;
 use Illuminate\Support\Facades\DB;
 
 
