@@ -15,6 +15,8 @@ use App\Infrastructure\Repositories\Interfaces\HomeApplianceRepositoryInterface;
 use App\Infrastructure\Repositories\Eloquent\HomeApplianceRepository;
 use App\Infrastructure\Repositories\Interfaces\RealEstateRepositoryInterface;
 use App\Infrastructure\Repositories\Eloquent\RealEstateRepository;
+use App\Infrastructure\Repositories\Eloquent\AdminRepository;
+use App\Infrastructure\Repositories\Interfaces\AdminRepositoryInterface;
 
 use App\Services\EmailService;
 use App\Application\UseCases\User\CreateUser;
@@ -38,6 +40,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(ElectricalApplianceRepositoryInterface::class,ElectricalApplianceRepository::class);
         $this->app->bind(HomeApplianceRepositoryInterface::class,HomeApplianceRepository::class);
         $this->app->bind(RealEstateRepositoryInterface::class,RealEstateRepository::class);
+        $this->app->bind(AdminRepositoryInterface::class, AdminRepository::class);
     }
 
     /**
