@@ -11,7 +11,7 @@ class LoginAdminUseCase{
         
         $admin=$this->repository->findByEmail($email);
 
-        if(!$admin || Hash::check($password,$admin->password))
+        if(!$admin || !Hash::check($password,$admin->password))
             return false;
 
         return "admin loggined successfully";    
