@@ -42,7 +42,7 @@
   <main class="flex-1 flex flex-col justify-center items-center">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {{-- صورة السيارات --}}
-      <a href="{{ route('dashboard.cars') }}" class="flex flex-col items-center">
+      <a href="#" onclick="goToCarsPage()" class="flex flex-col items-center">
         <img src="{{ asset('images/cars.jpg') }}"
              alt="السيارات"
              class="w-48 h-48 object-cover rounded shadow-lg"/>
@@ -97,5 +97,30 @@
         document.getElementById('add-admin-form').classList.toggle('hidden');
       });
   </script>
+
+<script>
+  function goToCarsPage() {
+    const token = localStorage.getItem('admin_token');
+    if (!token) {
+      alert("يرجى تسجيل الدخول أولاً.");
+      return;
+    }
+
+    // إرسال الطلب أولاً للتأكد من المصادقة
+    fetch('/api/check-auth', {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then(res => {
+      if (res.ok) {
+        window.location.href = "{{ route('dashboard.cars') }}";
+      } else {
+        alert("انتهت صلاحية الجلسة. يرجى تسجيل الدخول مجددًا.");
+      }
+    });
+  }
+</script>
 </body>
+
 </html>

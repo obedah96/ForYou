@@ -44,3 +44,11 @@ Route::middleware('auth:sanctum')->get('/products/{type}', [ProductController::c
 
 //dashboard routes
 Route::post('/dashboard/login',[AdminLoginController::class,'login']);
+
+
+Route::middleware('auth:sanctum')->get('/check-auth', function (Request $request) {
+    return response()->json([
+        'authenticated' => true,
+        'user' => $request->user()
+    ]);
+});
