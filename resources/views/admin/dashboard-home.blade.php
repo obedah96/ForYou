@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>لوحة التحكم الرئيسية</title>
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/dashboard-home.css') }}"/>
 </head>
 <body class="flex h-screen bg-gray-100">
 
