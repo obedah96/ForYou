@@ -12,7 +12,7 @@
   <aside class="w-64 bg-white shadow-lg p-4 flex flex-col">
     <div class="mb-6">
       <h2 class="text-xl font-semibold text-gray-800">الأدمن الحالي</h2>
-      <p class="mt-2 text-gray-600">{{ Auth::user()->name }}</p>
+      <p class="mt-2 text-gray-600">obedah</p>
     </div>
 
     <button id="toggle-add-admin"
