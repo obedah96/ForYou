@@ -12,7 +12,7 @@ body {
 
 /* الشريط الجانبي */
 aside {
-    width: 260px;
+    width: 320px;
     background-color: #1a1a1a;
     padding: 20px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
@@ -31,10 +31,15 @@ aside p {
     margin-top: 10px;
     font-size: 0.95rem;
 }
+.mb-6{
+    border-bottom: 1px inset;
+    margin-bottom: 30px;
+}
 
 /* الأزرار */
 button,
 button[type="submit"] {
+    width: 80%;
     background-color: #f59e0b;
     color: #111;
     padding: 10px;
@@ -52,7 +57,7 @@ button[type="submit"]:hover {
 
 /* النموذج */
 form input {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 1px solid #333;
     border-radius: 6px;
