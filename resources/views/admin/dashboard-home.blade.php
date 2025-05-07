@@ -73,7 +73,7 @@
 
     if (!token || !email) {
       // إعادة التوجيه لصفحة تسجيل الدخول إن لم يكن مخزنًا
-      window.location.href = "{{ route('admin.dashboard') }}";
+      window.location.href = "{{ route('dashboard') }}";
     }
 
     // 2. إعداد هيدر المصادقة
