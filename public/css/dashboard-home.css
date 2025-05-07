@@ -39,7 +39,8 @@ aside p {
 /* الأزرار */
 button,
 button[type="submit"] {
-    width: 80%;
+    width: 31%;
+    margin: 10px;
     background-color: #f59e0b;
     color: #111;
     padding: 10px;
@@ -57,6 +58,7 @@ button[type="submit"]:hover {
 
 /* النموذج */
 form input {
+    margin: 10px 0 10px 0;
     width: 80%;
     padding: 10px;
     border: 1px solid #333;
