@@ -82,7 +82,7 @@
     const email = localStorage.getItem('admin_email');
 
     if (!token || !email) {
-      window.location.href = "{{ route('admin.dashboard') }}";
+      window.location.href = "{{ route('dashboard') }}";
     }
 
     // إعداد هيدر المصادقة
