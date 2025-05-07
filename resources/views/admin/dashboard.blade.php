@@ -4,7 +4,35 @@
 <body class="bg-black">
   <div class="flex items-center justify-center min-h-screen">
     <form id="login-form" class="gradient-form …">
-      …
+    <h1 class="text-center text-2xl font-semibold mb-6 text-black">
+        أهلا بك في لوحة التحكم
+      </h1>
+
+      <div id="error-message" class="mb-4 text-red-500" style="display:none;"></div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-black mb-1">الايميل</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          class="w-full px-4 py-2 rounded focus:outline-none"
+          placeholder="example@domain.com"
+        >
+      </div>
+
+      <div class="mb-6">
+        <label for="password" class="block text-black mb-1">كلمة المرور</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          class="w-full px-4 py-2 rounded focus:outline-none"
+          placeholder="••••••••"
+        >
+    
       <button type="submit" class="w-full …">تسجيل الدخول</button>
     </form>
   </div>
