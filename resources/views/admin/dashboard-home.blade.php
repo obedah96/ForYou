@@ -39,84 +39,59 @@
   </aside>
 
   {{-- Main Content --}}
-  <main class="flex-1 p-6 overflow-y-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <main class="flex-1 flex flex-col justify-center items-center">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {{-- صورة السيارات --}}
+      <a href="{{ route('dashboard.cars') }}" class="flex flex-col items-center">
+        <img src="{{ asset('images/cars.jpg') }}"
+             alt="السيارات"
+             class="w-48 h-48 object-cover rounded shadow-lg"/>
+        <span class="mt-2 font-semibold text-gray-700">السيارات</span>
+      </a>
 
-      <section class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-semibold mb-3">آخر السيارات</h3>
-        <ul id="cars-list" class="space-y-2"></ul>
-      </section>
+      {{-- صورة الأجهزة الكهربائية --}}
+      <a href="{{ route('dashboard.electrical') }}" class="flex flex-col items-center">
+        <img src="{{ asset('images/electrical.jpg') }}"
+             alt="الأجهزة الكهربائية"
+             class="w-48 h-48 object-cover rounded shadow-lg"/>
+        <span class="mt-2 font-semibold text-gray-700">الأجهزة الكهربائية</span>
+      </a>
 
-      <section class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-semibold mb-3">آخر الأجهزة الكهربائية</h3>
-        <ul id="electrical-list" class="space-y-2"></ul>
-      </section>
+      {{-- صورة الأجهزة المنزلية --}}
+      <a href="{{ route('dashboard.home_appliances') }}" class="flex flex-col items-center">
+        <img src="{{ asset('images/home_appliances.jpg') }}"
+             alt="الأجهزة المنزلية"
+             class="w-48 h-48 object-cover rounded shadow-lg"/>
+        <span class="mt-2 font-semibold text-gray-700">الأجهزة المنزلية</span>
+      </a>
 
-      <section class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-semibold mb-3">آخر الأجهزة المنزلية</h3>
-        <ul id="home-appliances-list" class="space-y-2"></ul>
-      </section>
-
-      <section class="bg-white p-4 rounded shadow">
-        <h3 class="text-lg font-semibold mb-3">آخر العقارات</h3>
-        <ul id="real-estates-list" class="space-y-2"></ul>
-      </section>
-
+      {{-- صورة العقارات --}}
+      <a href="{{ route('dashboard.real_estates') }}" class="flex flex-col items-center">
+        <img src="{{ asset('images/real_estates.jpg') }}"
+             alt="العقارات"
+             class="w-48 h-48 object-cover rounded shadow-lg"/>
+        <span class="mt-2 font-semibold text-gray-700">العقارات</span>
+      </a>
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    // 1. جلب التوكن والإيميل
+    // جلب التوكن والإيميل من localStorage
     const token = localStorage.getItem('admin_token');
     const email = localStorage.getItem('admin_email');
 
     if (!token || !email) {
-      // إعادة التوجيه لصفحة تسجيل الدخول إن لم يكن مخزنًا
-      window.location.href = "{{ route('dashboard') }}";
+      window.location.href = "{{ route('login.page') }}";
     }
 
-    // 2. إعداد هيدر المصادقة
+    // إعداد هيدر المصادقة
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-    // 3. عرض الإيميل في الـ sidebar
+    // عرض الإيميل
     document.getElementById('admin-email').textContent = email;
 
-    // 4. نقاط النهاية والمراجع للعناصر
-    const endpoints = {
-      cars:         'https://foryou.cash/api/cars/latest',
-      electrical:   'https://foryou.cash/api/ElectricalAppliances/latest',
-      home:         'https://foryou.cash/api/home-appliances/latest',
-      realEstates:  'https://foryou.cash/api/real-estates/latest'
-    };
-    const lists = {
-      cars:         document.getElementById('cars-list'),
-      electrical:   document.getElementById('electrical-list'),
-      home:         document.getElementById('home-appliances-list'),
-      realEstates:  document.getElementById('real-estates-list')
-    };
-
-    // 5. دالة لجلب وعرض أول 3 عناصر
-    function fetchAndFill(key) {
-      axios.get(endpoints[key])
-        .then(res => {
-          lists[key].innerHTML = '';
-          res.data.slice(0, 3).forEach(item => {
-            const li = document.createElement('li');
-            li.className = 'p-2 border rounded';
-            li.textContent = item.name || item.title || '—';
-            lists[key].appendChild(li);
-          });
-        })
-        .catch(() => {
-          lists[key].innerHTML = '<li class="text-red-500">فشل جلب البيانات</li>';
-        });
-    }
-
-    // 6. نفّذ الجلب لكل قسم
-    Object.keys(endpoints).forEach(fetchAndFill);
-
-    // 7. إظهار/إخفاء نموذج إضافة الأدمن
+    // تفعيل زر إظهار/إخفاء نموذج إضافة الأدمن
     document.getElementById('toggle-add-admin')
       .addEventListener('click', () => {
         document.getElementById('add-admin-form').classList.toggle('hidden');
