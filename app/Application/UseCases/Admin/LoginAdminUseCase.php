@@ -7,13 +7,13 @@ class LoginAdminUseCase{
 
     public function __construct(protected AdminRepositoryInterface $repository){}
 
-    public function execute(string $email , string $password) :string|false {
+    public function execute(string $email , string $password) :?string {
         
         $admin=$this->repository->findByEmail($email);
 
         if(!$admin || !Hash::check($password,$admin->password))
-            return false;
+            return null;
 
-        return "admin loggined successfully";    
+        return $admin->createToken('admin-login')->plainTextToken;  
     }
 }
