@@ -12,7 +12,8 @@
   <aside class="w-64 bg-white shadow-lg p-4 flex flex-col">
     <div class="mb-6">
       <h2 class="text-xl font-semibold text-gray-800">الأدمن الحالي</h2>
-      <p class="mt-2 text-gray-600">obedah</p>
+      {{-- هنا يمكنك عرض اسم الأدمن من الجلسة --}}
+      <p class="mt-2 text-gray-600">{{ Auth::user()->name }}</p>
     </div>
 
     <button id="toggle-add-admin"
@@ -72,49 +73,54 @@
   {{-- Axios CDN --}}
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    // إظهار/إخفاء نموذج إضافة أدمن جديد
-    document.getElementById('toggle-add-admin')
-      .addEventListener('click', () => {
-        document.getElementById('add-admin-form').classList.toggle('hidden');
-      });
+    // 1. حاول جلب التوكن من التخزين المحلي
+    const token = localStorage.getItem('admin_token');
+    if (!token) {
+      // إذا لم يوجد توكن، أعِد التوجيه لصفحة تسجيل الدخول
+      window.location.href = "{{ route('login.page') }}";
+    }
 
-    // نقاط النهاية وجمع القوائم
+    // 2. أضف هيدر المصادقة لجميع طلبات Axios
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+
+    // 3. نقاط النهاية والقوائم
     const endpoints = {
-      cars:           'https://foryou.cash/api/cars/latest',
-      electrical:    'https://foryou.cash/api/ElectricalAppliances/latest',
-      home:          'https://foryou.cash/api/home-appliances/latest',
-      realEstates:   'https://foryou.cash/api/real-estates/latest'
+      cars:         'https://foryou.cash/api/cars/latest',
+      electrical:   'https://foryou.cash/api/ElectricalAppliances/latest',
+      home:         'https://foryou.cash/api/home-appliances/latest',
+      realEstates:  'https://foryou.cash/api/real-estates/latest'
     };
-
     const lists = {
-      cars:           document.getElementById('cars-list'),
-      electrical:    document.getElementById('electrical-list'),
-      home:          document.getElementById('home-appliances-list'),
-      realEstates:   document.getElementById('real-estates-list')
+      cars:         document.getElementById('cars-list'),
+      electrical:   document.getElementById('electrical-list'),
+      home:         document.getElementById('home-appliances-list'),
+      realEstates:  document.getElementById('real-estates-list')
     };
 
-    // دالة للمسح ثم التعبئة
+    // 4. دالة لجلب وعرض البيانات
     function fetchAndFill(key) {
       axios.get(endpoints[key])
         .then(res => {
-          lists[key].innerHTML = ''; // مسح المحتوى القديم
-          // نفترض أن الـ API يرجع مصفوفة من الكائنات
+          lists[key].innerHTML = '';
           res.data.slice(0, 3).forEach(item => {
             const li = document.createElement('li');
             li.className = 'p-2 border rounded';
-            // ابحث هنا عن الخاصية المناسبة للعرض: name أو title إلخ
-            li.textContent = item.name || item.title || JSON.stringify(item);
+            li.textContent = item.name || item.title || '—';
             lists[key].appendChild(li);
           });
         })
-        .catch(err => {
+        .catch(() => {
           lists[key].innerHTML = '<li class="text-red-500">فشل جلب البيانات</li>';
-          console.error(err);
         });
     }
 
-    // استدعاء لكل قسم
+    // 5. نداء لكل قسم
     Object.keys(endpoints).forEach(fetchAndFill);
+
+    // 6. إظهار/إخفاء نموذج إضافة الأدمن
+    document.getElementById('toggle-add-admin').addEventListener('click', () => {
+      document.getElementById('add-admin-form').classList.toggle('hidden');
+    });
   </script>
 </body>
 </html>
